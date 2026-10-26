@@ -3,22 +3,18 @@
 <desc id="d">GrafX shared-store long-run demo: several processes share one Okto Grafx folder.</desc>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-<stop offset="0" stop-color="#1e1b4b"/>
-<stop offset="0.55" stop-color="#0f172a"/>
-<stop offset="1" stop-color="#042f2e"/>
-</linearGradient>
-<linearGradient id="hl" x1="0" y1="0" x2="1" y2="0">
-<stop offset="0" stop-color="#f59e0b"/>
-<stop offset="1" stop-color="#f43f5e"/>
+<stop offset="0" stop-color="#fde68a"/>
+<stop offset="0.6" stop-color="#fbbf24"/>
+<stop offset="1" stop-color="#f59e0b"/>
 </linearGradient>
 </defs>
 <rect width="1200" height="280" fill="url(#bg)"/>
-<text x="600" y="108" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#f8fafc">One folder.</text>
-<text x="600" y="172" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="url(#hl)">Several processes.</text>
-<text x="600" y="214" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#cbd5e1">Nothing lost. Every change can be looked up.</text>
-<circle cx="552" cy="248" r="6" fill="#f59e0b"/>
-<circle cx="576" cy="248" r="6" fill="#f43f5e"/>
-<circle cx="600" cy="248" r="6" fill="#22d3ee"/>
-<circle cx="624" cy="248" r="6" fill="#a78bfa"/>
-<text x="648" y="253" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#94a3b8">Okto Grafx 0.0.8</text>
+<text x="600" y="108" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#1c1917">One folder.</text>
+<text x="600" y="172" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#78350f">Several processes.</text>
+<text x="600" y="214" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#44403c">Nothing lost. Every change can be looked up.</text>
+<circle cx="552" cy="248" r="6" fill="#1c1917"/>
+<circle cx="576" cy="248" r="6" fill="#78350f"/>
+<circle cx="600" cy="248" r="6" fill="#b45309"/>
+<circle cx="624" cy="248" r="6" fill="#fffbeb"/>
+<text x="648" y="253" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#57534e">Okto Grafx 0.0.8</text>
 </svg>
