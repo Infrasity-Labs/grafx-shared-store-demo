@@ -1,0 +1,127 @@
+[
+ {
+  "id": 1,
+  "name": "Brightloom Cafe",
+  "product_id": 1
+ },
+ {
+  "id": 2,
+  "name": "Quillstone Labs",
+  "product_id": 2
+ },
+ {
+  "id": 3,
+  "name": "Harborview Dental",
+  "product_id": 3
+ },
+ {
+  "id": 4,
+  "name": "Mossgate Studio",
+  "product_id": 4
+ },
+ {
+  "id": 5,
+  "name": "Ember and Oak",
+  "product_id": 5
+ },
+ {
+  "id": 6,
+  "name": "Palmer Row Books",
+  "product_id": 1
+ },
+ {
+  "id": 7,
+  "name": "Sunbridge Logistics",
+  "product_id": 2
+ },
+ {
+  "id": 8,
+  "name": "Tallpine Outfitters",
+  "product_id": 3
+ },
+ {
+  "id": 9,
+  "name": "Velvet Anchor Press",
+  "product_id": 4
+ },
+ {
+  "id": 10,
+  "name": "Copperfield Bikes",
+  "product_id": 5
+ },
+ {
+  "id": 11,
+  "name": "Driftwood Analytics",
+  "product_id": 1
+ },
+ {
+  "id": 12,
+  "name": "Oakline Clinic",
+  "product_id": 2
+ },
+ {
+  "id": 13,
+  "name": "Marlow Street Bakery",
+  "product_id": 3
+ },
+ {
+  "id": 14,
+  "name": "Northfold Farms",
+  "product_id": 4
+ },
+ {
+  "id": 15,
+  "name": "Pebble and Plum",
+  "product_id": 5
+ },
+ {
+  "id": 16,
+  "name": "Redwren Design",
+  "product_id": 1
+ },
+ {
+  "id": 17,
+  "name": "Silverbank Tutors",
+  "product_id": 2
+ },
+ {
+  "id": 18,
+  "name": "Thistle Hill Hotel",
+  "product_id": 3
+ },
+ {
+  "id": 19,
+  "name": "Umber Works",
+  "product_id": 4
+ },
+ {
+  "id": 20,
+  "name": "Violet Hour Spa",
+  "product_id": 5
+ },
+ {
+  "id": 21,
+  "name": "Willow Lane Pharmacy",
+  "product_id": 1
+ },
+ {
+  "id": 22,
+  "name": "Yarrow Tech Repair",
+  "product_id": 2
+ },
+ {
+  "id": 23,
+  "name": "Zephyr Print Shop",
+  "product_id": 3
+ },
+ {
+  "id": 24,
+  "name": "Amberfield Realty",
+  "product_id": 4
+ },
+ {
+  "id": 25,
+  "name": "Blue Heron Tours",
+  "product_id": 5
+ }
+]

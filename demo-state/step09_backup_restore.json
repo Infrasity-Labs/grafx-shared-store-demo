@@ -1,0 +1,60 @@
+{
+ "elapsed_seconds": 9.0,
+ "grafx_version": "0.0.8",
+ "name": "backup_restore",
+ "result": {
+  "backup_dir_bytes": 29039085,
+  "backup_files": 49,
+  "backup_payload_bytes": 29031556,
+  "counts_original": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "fork_counts": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "fork_counts_match": true,
+  "fork_new_uuid": true,
+  "fork_verify_findings": 0,
+  "logical_package_bytes": 1043151,
+  "logical_rows_exported": 3240,
+  "logical_rows_imported": 3240,
+  "logical_transfer": {
+   "supported": true
+  },
+  "original_dir_bytes": 29031639,
+  "physical_backup": {
+   "supported": true
+  },
+  "platform": "linux",
+  "processes_alive_at_restore": 0,
+  "restored_counts": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "restored_counts_match": true,
+  "restored_dir_bytes": 29031556,
+  "restored_same_uuid": true,
+  "restored_verify_findings": 0
+ },
+ "step": 9
+}

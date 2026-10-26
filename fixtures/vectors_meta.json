@@ -1,0 +1,11 @@
+{
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "dimension": 384,
+ "normalized": true,
+ "rounded_decimals": 5,
+ "sentence_transformers": "6.2.0",
+ "torch": "2.14.1",
+ "python": "3.12.14",
+ "texts_encoded": 553,
+ "peak_rss_mb": 591.4
+}

@@ -1,0 +1,46 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Dry run needs no Grafx install
+        run: python run_demo.py --dry-run
+
+      - name: Install the pinned Grafx
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -c "import okto_grafx; print(okto_grafx.__version__)"
+          test "$(python -c 'import okto_grafx; print(okto_grafx.__version__)')" = "$(sed -n 's/^okto-grafx==//p' requirements.txt)"
+
+      - name: Compile check
+        run: python -m compileall -q ticketgraph scripts tests run_demo.py
+
+      - name: Node check
+        run: node --check node/read_schema.mjs
+
+      - name: Unit tests and recorded-output checks
+        run: python -m unittest discover tests -v
+
+      - name: Repo checks (JSON, links, dashes, keys, paths)
+        run: python scripts/check_repo.py
+
+      - name: Short real run of steps 1 to 4 on a temporary folder
+        run: |
+          python run_demo.py --steps 1 2 3 4 --workdir "$RUNNER_TEMP/work" --state-dir "$RUNNER_TEMP/state"
+          python scripts/assert_short_run.py "$RUNNER_TEMP/state"

@@ -1,0 +1,38 @@
+{
+ "elapsed_seconds": 2.42,
+ "grafx_version": "0.0.8",
+ "name": "kill_and_recover",
+ "result": {
+  "batch_size": 10,
+  "committed_expected": 20,
+  "committed_found": 20,
+  "counts_after": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 0,
+   "tickets": 530
+  },
+  "killed_pid": 55,
+  "killed_returncode": -9,
+  "opened_links_for_crash_tickets": 20,
+  "recovery_outcome": "clean",
+  "recovery_report": {
+   "findings": [],
+   "last_good_lsn": 5993,
+   "ledger_entries_created": 0,
+   "outcome": "clean",
+   "records_discarded": 0,
+   "records_replayed": 433
+  },
+  "reopen_seconds": 0.264,
+  "signal": "SIGKILL",
+  "unfinished_expected_absent": 10,
+  "unfinished_found": 0,
+  "verify_findings": 0
+ },
+ "step": 5
+}

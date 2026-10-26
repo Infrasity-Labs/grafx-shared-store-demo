@@ -1,0 +1,45 @@
+{
+ "elapsed_seconds": 0.515,
+ "grafx_version": "0.0.8",
+ "name": "setup",
+ "result": {
+  "commit_history": true,
+  "grafx_version": "0.0.8",
+  "identity_indexes": true,
+  "last_commit": {
+   "database_uuid": "0c796c3a7b17492ba74684065161384d",
+   "sequence": 19
+  },
+  "machine": "aarch64",
+  "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+  "python": "3.12.15",
+  "system_history_tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "verify_findings": 0,
+  "verify_pages_checked": 1374,
+  "verify_records_checked": 11
+ },
+ "step": 1
+}

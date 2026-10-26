@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" role="img" aria-labelledby="t d">
+<title id="t">Architecture</title>
+<desc id="d">A Maintainer starts four processes. All four use one Grafx folder. The folder is backed up and restored, exported and imported, and read by a Node program through the CLI.</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a93a5"/></marker></defs>
+<rect width="1100" height="590" fill="#0b0d12"/>
+<rect x="440" y="30" width="220" height="44" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="550.0" y="59.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Maintainer</text>
+<rect x="50" y="130" width="200" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="150.0" y="160.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Importer A</text>
+<text x="150.0" y="182.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">writes tickets</text>
+<line x1="550" y1="74" x2="150" y2="130" stroke="#3a4256" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="150" y1="194" x2="150" y2="270" stroke="#f5a623" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="300" y="130" width="200" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="400.0" y="160.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Importer B</text>
+<text x="400.0" y="182.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">writes tickets</text>
+<line x1="550" y1="74" x2="400" y2="130" stroke="#3a4256" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="400" y1="194" x2="400" y2="270" stroke="#f5a623" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="550" y="130" width="200" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="650.0" y="160.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Searcher</text>
+<text x="650.0" y="182.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">reads, searches</text>
+<line x1="550" y1="74" x2="650" y2="130" stroke="#3a4256" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="650" y1="194" x2="650" y2="270" stroke="#f5a623" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="800" y="130" width="200" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="900.0" y="160.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Auditor</text>
+<text x="900.0" y="182.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">verify, history, backup</text>
+<line x1="550" y1="74" x2="900" y2="130" stroke="#3a4256" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="900" y1="194" x2="900" y2="270" stroke="#f5a623" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="150" y="270" width="800" height="150" rx="12" fill="#17130a" stroke="#f5a623" stroke-width="2"/>
+<text x="550" y="306" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#f5a623">One folder on a local disk: graph/</text>
+<text x="190" y="346" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">grafx.meta</text>
+<text x="190" y="372" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">catalog.dat</text>
+<text x="190" y="398" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">heap.dat</text>
+<text x="450" y="346" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">index/</text>
+<text x="450" y="372" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">wal/</text>
+<text x="450" y="398" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">commits.dat</text>
+<text x="710" y="346" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#d9dde6">system-history.dat</text>
+<rect x="50" y="490" width="300" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="200.0" y="520.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Backup, then restore</text>
+<text x="200.0" y="542.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">new folder, same identity</text>
+<line x1="200" y1="420" x2="200" y2="490" stroke="#8a93a5" stroke-width="1.5" marker-end="url(#ar)"/>
+<rect x="400" y="490" width="300" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="550.0" y="520.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Export, then import</text>
+<text x="550.0" y="542.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">second store, new identity</text>
+<line x1="550" y1="420" x2="550" y2="490" stroke="#8a93a5" stroke-width="1.5" marker-end="url(#ar)"/>
+<rect x="750" y="490" width="300" height="64" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="900.0" y="520.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" fill="#e6e9ef">Node reads schema</text>
+<text x="900.0" y="542.0" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8a93a5">through the oktografx CLI</text>
+<line x1="900" y1="420" x2="900" y2="490" stroke="#8a93a5" stroke-width="1.5" marker-end="url(#ar)"/>
+</svg>

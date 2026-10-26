@@ -1,0 +1,43 @@
+{
+ "elapsed_seconds": 0.364,
+ "grafx_version": "0.0.8",
+ "name": "setup",
+ "result": {
+  "commit_history": true,
+  "grafx_version": "0.0.8",
+  "identity_indexes": true,
+  "last_commit": {
+   "database_uuid": "ead20ad9f01447db9ee4181f4b5c5728",
+   "sequence": 19
+  },
+  "python": "3.12.14",
+  "system_history_tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "verify_findings": 0,
+  "verify_pages_checked": 1374,
+  "verify_records_checked": 11
+ },
+ "step": 1
+}

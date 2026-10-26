@@ -1,0 +1,6 @@
+.venv/
+live-store/
+demo-state/
+.git/
+__pycache__/
+node_modules/

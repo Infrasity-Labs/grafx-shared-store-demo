@@ -1,0 +1,30 @@
+{
+ "elapsed_seconds": 1.656,
+ "grafx_version": "0.0.8",
+ "name": "first_load",
+ "result": {
+  "all_durable": true,
+  "batches": 20,
+  "conflicts": 0,
+  "counts": {
+   "about": 200,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 200,
+   "opened": 200,
+   "products": 5,
+   "related": 0,
+   "tickets": 200
+  },
+  "pid": 1261,
+  "static": {
+   "articles": 40,
+   "conflicts": 0,
+   "customers": 25,
+   "durable": true,
+   "products": 5
+  },
+  "tickets_loaded": 200
+ },
+ "step": 2
+}

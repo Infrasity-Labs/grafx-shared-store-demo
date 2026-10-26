@@ -1,0 +1,27 @@
+[
+ {
+  "id": 1,
+  "name": "Tidewater Sync",
+  "summary": "File sync between laptops and phones"
+ },
+ {
+  "id": 2,
+  "name": "Marrow Billing",
+  "summary": "Invoices, taxes and card payments"
+ },
+ {
+  "id": 3,
+  "name": "Lantern Reports",
+  "summary": "Dashboards and scheduled reports"
+ },
+ {
+  "id": 4,
+  "name": "Cobalt Gateway",
+  "summary": "API gateway with webhooks and keys"
+ },
+ {
+  "id": 5,
+  "name": "Fennel Mobile",
+  "summary": "Companion mobile app"
+ }
+]

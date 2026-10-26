@@ -1,0 +1,1250 @@
+{
+ "elapsed_seconds": 1.483,
+ "grafx_version": "0.0.8",
+ "name": "hybrid",
+ "result": {
+  "graph_rule": "Related edges, both directions, 2 hops, weight 0.5. Seeds are the 3 lowest ticket ids of the question's product, set before any search.",
+  "hybrid_no_graph_results": [
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 275,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031099,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 491,
+      "vector_rank": 8
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031025,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 218,
+      "vector_rank": 6
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 9,
+      "score": 0.030886,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 65,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 6,
+      "score": 0.030777,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 306,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k01",
+    "query": "password reset email not arriving",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 307,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 90,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031099,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 172,
+      "vector_rank": 8
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 1,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.030798,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 375,
+      "vector_rank": 7
+     }
+    ],
+    "id": "k02",
+    "query": "sync stalls on large folder",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032522,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 3,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 132,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031754,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 2014,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031746,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 10,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 256,
+      "vector_rank": 5
+     }
+    ],
+    "id": "k03",
+    "query": "wrong tax on invoice",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.032266,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 108,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032266,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 162,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 48,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.03101,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 96,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 190,
+      "vector_rank": 5
+     }
+    ],
+    "id": "k04",
+    "query": "export csv empty file",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 100,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031746,
+      "subject": "Webhook timeout: our server sees the webhook returns a 504 after thirty seconds",
+      "ticket_id": 151,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 8,
+      "score": 0.031099,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 451,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.030835,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 12,
+      "vector_rank": 8
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 7,
+      "score": 0.03055,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 290,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k05",
+    "query": "webhook timeout 504",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 138,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 456,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031754,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 449,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.031498,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 91,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 6,
+      "score": 0.031281,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 397,
+      "vector_rank": 2
+     }
+    ],
+    "id": "k06",
+    "query": "rate limit 429 errors",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 445,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 7,
+      "score": 0.031319,
+      "subject": "Dashboard speed: the main dashboard takes a minute to show charts",
+      "ticket_id": 276,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 6,
+      "score": 0.031281,
+      "subject": "Dashboard speed: the main dashboard takes a minute to show charts",
+      "ticket_id": 64,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031258,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 403,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031054,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 250,
+      "vector_rank": 7
+     }
+    ],
+    "id": "k07",
+    "query": "dashboard loads slowly",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032787,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 152,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032002,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 303,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.031754,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 354,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031498,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 410,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.03031,
+      "subject": "Push notification: push notifications arrive hours late",
+      "ticket_id": 409,
+      "vector_rank": 7
+     }
+    ],
+    "id": "k08",
+    "query": "push notifications missing",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032787,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 475,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 331,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031746,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 359,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 28,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 7,
+      "score": 0.03055,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 420,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k09",
+    "query": "cannot sign in",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.032266,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 453,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032266,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2015,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2009,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Duplicate charge: I see a duplicate charge on the card statement",
+      "ticket_id": 417,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.030536,
+      "subject": "Duplicate charge: I see a duplicate charge on the card statement",
+      "ticket_id": 437,
+      "vector_rank": 6
+     }
+    ],
+    "id": "k10",
+    "query": "duplicate charge refund",
+    "regime": "complete"
+   }
+  ],
+  "hybrid_results": [
+   {
+    "hits": [
+     {
+      "graph_distance": 0,
+      "lexical_rank": 4,
+      "score": 0.03752,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 2,
+      "vector_rank": 13
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 275,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031099,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 491,
+      "vector_rank": 8
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031025,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 218,
+      "vector_rank": 6
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 9,
+      "score": 0.030886,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 65,
+      "vector_rank": 1
+     }
+    ],
+    "id": "k01",
+    "query": "password reset email not arriving",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": 0,
+      "lexical_rank": 4,
+      "score": 0.039206,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 1,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 307,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 90,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": 2,
+      "lexical_rank": 30,
+      "score": 0.031548,
+      "subject": "Selective sync: selective sync still downloads folders I unchecked",
+      "ticket_id": 23,
+      "vector_rank": 20
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031099,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 172,
+      "vector_rank": 8
+     }
+    ],
+    "id": "k02",
+    "query": "sync stalls on large folder",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": 0,
+      "lexical_rank": 1,
+      "score": 0.040719,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 3,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": 0,
+      "lexical_rank": 3,
+      "score": 0.039943,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 10,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 132,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031754,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 2014,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 256,
+      "vector_rank": 5
+     }
+    ],
+    "id": "k03",
+    "query": "wrong tax on invoice",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.032266,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 108,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032266,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 162,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 48,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": 0,
+      "lexical_rank": 24,
+      "score": 0.03109,
+      "subject": "Invoice export: exporting invoices to csv times out on large accounts",
+      "ticket_id": 11,
+      "vector_rank": 31
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.03101,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 96,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k04",
+    "query": "export csv empty file",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": 0,
+      "lexical_rank": 2,
+      "score": 0.039032,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 12,
+      "vector_rank": 8
+     },
+     {
+      "graph_distance": 1,
+      "lexical_rank": 13,
+      "score": 0.034263,
+      "subject": "Webhook retry: I cannot replay a webhook from the dashboard",
+      "ticket_id": 16,
+      "vector_rank": 20
+     },
+     {
+      "graph_distance": 0,
+      "lexical_rank": 24,
+      "score": 0.032447,
+      "subject": "Webhook retry: failed webhooks are not retried",
+      "ticket_id": 8,
+      "vector_rank": 21
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 100,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031746,
+      "subject": "Webhook timeout: our server sees the webhook returns a 504 after thirty seconds",
+      "ticket_id": 151,
+      "vector_rank": 3
+     }
+    ],
+    "id": "k05",
+    "query": "webhook timeout 504",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031778,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 138,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 456,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031754,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 449,
+      "vector_rank": 4
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.031498,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 91,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 6,
+      "score": 0.031281,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 397,
+      "vector_rank": 2
+     }
+    ],
+    "id": "k06",
+    "query": "rate limit 429 errors",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.031778,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 445,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 7,
+      "score": 0.031319,
+      "subject": "Dashboard speed: the main dashboard takes a minute to show charts",
+      "ticket_id": 276,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 6,
+      "score": 0.031281,
+      "subject": "Dashboard speed: the main dashboard takes a minute to show charts",
+      "ticket_id": 64,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 5,
+      "score": 0.031258,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 403,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.031054,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 250,
+      "vector_rank": 7
+     }
+    ],
+    "id": "k07",
+    "query": "dashboard loads slowly",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": 2,
+      "lexical_rank": 6,
+      "score": 0.037581,
+      "subject": "Push notification: push notifications arrive hours late",
+      "ticket_id": 31,
+      "vector_rank": 9
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032787,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 152,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032002,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 303,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.031754,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 354,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031498,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 410,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k08",
+    "query": "push notifications missing",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032787,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 475,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 331,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.031746,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 359,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 28,
+      "vector_rank": 5
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 7,
+      "score": 0.03055,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 420,
+      "vector_rank": 4
+     }
+    ],
+    "id": "k09",
+    "query": "cannot sign in",
+    "regime": "complete"
+   },
+   {
+    "hits": [
+     {
+      "graph_distance": 1,
+      "lexical_rank": 17,
+      "score": 0.032287,
+      "subject": "Refund: the refund email never reached the customer",
+      "ticket_id": 13,
+      "vector_rank": 29
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 3,
+      "score": 0.032266,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 453,
+      "vector_rank": 1
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 1,
+      "score": 0.032266,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2015,
+      "vector_rank": 3
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 2,
+      "score": 0.032258,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2009,
+      "vector_rank": 2
+     },
+     {
+      "graph_distance": null,
+      "lexical_rank": 4,
+      "score": 0.03101,
+      "subject": "Duplicate charge: I see a duplicate charge on the card statement",
+      "ticket_id": 417,
+      "vector_rank": 5
+     }
+    ],
+    "id": "k10",
+    "query": "duplicate charge refund",
+    "regime": "complete"
+   }
+  ],
+  "questions": 10,
+  "side_by_side": [
+   {
+    "hybrid_no_graph_top5": [
+     275,
+     491,
+     218,
+     65,
+     306
+    ],
+    "hybrid_top5": [
+     2,
+     275,
+     491,
+     218,
+     65
+    ],
+    "id": "k01",
+    "query": "password reset email not arriving",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     491,
+     275,
+     218,
+     2,
+     284
+    ],
+    "top1_changed_no_graph": true,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     307,
+     90,
+     172,
+     1,
+     375
+    ],
+    "hybrid_top5": [
+     1,
+     307,
+     90,
+     23,
+     172
+    ],
+    "id": "k02",
+    "query": "sync stalls on large folder",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     172,
+     307,
+     375,
+     1,
+     90
+    ],
+    "top1_changed_no_graph": true,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     3,
+     132,
+     2014,
+     10,
+     256
+    ],
+    "hybrid_top5": [
+     3,
+     10,
+     132,
+     2014,
+     256
+    ],
+    "id": "k03",
+    "query": "wrong tax on invoice",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     3,
+     2014,
+     10,
+     256,
+     132
+    ],
+    "top1_changed_no_graph": false,
+    "top1_changed_with_graph": false,
+    "top5_set_changed_with_graph": false
+   },
+   {
+    "hybrid_no_graph_top5": [
+     108,
+     162,
+     48,
+     96,
+     190
+    ],
+    "hybrid_top5": [
+     108,
+     162,
+     48,
+     11,
+     96
+    ],
+    "id": "k04",
+    "query": "export csv empty file",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     162,
+     48,
+     108,
+     190,
+     96
+    ],
+    "top1_changed_no_graph": true,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     100,
+     151,
+     451,
+     12,
+     290
+    ],
+    "hybrid_top5": [
+     12,
+     16,
+     8,
+     100,
+     151
+    ],
+    "id": "k05",
+    "query": "webhook timeout 504",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     100,
+     12,
+     151,
+     239,
+     231
+    ],
+    "top1_changed_no_graph": false,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     138,
+     456,
+     449,
+     91,
+     397
+    ],
+    "hybrid_top5": [
+     138,
+     456,
+     449,
+     91,
+     397
+    ],
+    "id": "k06",
+    "query": "rate limit 429 errors",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     456,
+     449,
+     486,
+     91,
+     138
+    ],
+    "top1_changed_no_graph": true,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     445,
+     276,
+     64,
+     403,
+     250
+    ],
+    "hybrid_top5": [
+     445,
+     276,
+     64,
+     403,
+     250
+    ],
+    "id": "k07",
+    "query": "dashboard loads slowly",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     445,
+     250,
+     171,
+     72,
+     403
+    ],
+    "top1_changed_no_graph": false,
+    "top1_changed_with_graph": false,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     152,
+     303,
+     354,
+     410,
+     409
+    ],
+    "hybrid_top5": [
+     31,
+     152,
+     303,
+     354,
+     410
+    ],
+    "id": "k08",
+    "query": "push notifications missing",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     152,
+     303,
+     410,
+     354,
+     409
+    ],
+    "top1_changed_no_graph": false,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     475,
+     331,
+     359,
+     28,
+     420
+    ],
+    "hybrid_top5": [
+     475,
+     331,
+     359,
+     28,
+     420
+    ],
+    "id": "k09",
+    "query": "cannot sign in",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     475,
+     331,
+     359,
+     28,
+     134
+    ],
+    "top1_changed_no_graph": false,
+    "top1_changed_with_graph": false,
+    "top5_set_changed_with_graph": true
+   },
+   {
+    "hybrid_no_graph_top5": [
+     453,
+     2015,
+     2009,
+     417,
+     437
+    ],
+    "hybrid_top5": [
+     13,
+     453,
+     2015,
+     2009,
+     417
+    ],
+    "id": "k10",
+    "query": "duplicate charge refund",
+    "text_top1_tied_with_top2": false,
+    "text_top5": [
+     2015,
+     2009,
+     453,
+     417,
+     437
+    ],
+    "top1_changed_no_graph": true,
+    "top1_changed_with_graph": true,
+    "top5_set_changed_with_graph": true
+   }
+  ],
+  "text_top1_tied_with_top2": 0,
+  "top1_changed_no_graph": 5,
+  "top1_changed_with_graph": 7,
+  "top5_set_changed_with_graph": 9
+ },
+ "step": 7
+}

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+<title id="t">One folder. Several processes.</title>
+<desc id="d">Four programs (Importer A, Importer B, Searcher, Auditor) share one Okto Grafx folder named graph.</desc>
+<rect width="1200" height="420" fill="#0b0d12"/>
+<line x1="0" y1="0" x2="0" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="60" y1="0" x2="60" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="120" y1="0" x2="120" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="180" y1="0" x2="180" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="240" y1="0" x2="240" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="300" y1="0" x2="300" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="360" y1="0" x2="360" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="420" y1="0" x2="420" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="480" y1="0" x2="480" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="540" y1="0" x2="540" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="600" y1="0" x2="600" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="660" y1="0" x2="660" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="720" y1="0" x2="720" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="780" y1="0" x2="780" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="840" y1="0" x2="840" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="900" y1="0" x2="900" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="960" y1="0" x2="960" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="1020" y1="0" x2="1020" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="1080" y1="0" x2="1080" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="1140" y1="0" x2="1140" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="1200" y1="0" x2="1200" y2="420" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="0" x2="1200" y2="0" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="60" x2="1200" y2="60" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="120" x2="1200" y2="120" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="180" x2="1200" y2="180" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="240" x2="1200" y2="240" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="300" x2="1200" y2="300" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="360" x2="1200" y2="360" stroke="#151922" stroke-width="1"/>
+<line x1="0" y1="420" x2="1200" y2="420" stroke="#151922" stroke-width="1"/>
+<text x="60" y="140" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#f2f4f8">One folder.</text>
+<text x="60" y="204" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#f5a623">Several processes.</text>
+<text x="60" y="260" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#aab2c0">Nothing lost. Every change can be looked up.</text>
+<text x="60" y="360" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#7b8494">Okto Grafx 0.0.8 · embedded graph database</text>
+<rect x="640" y="70" width="230" height="52" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="755" y="102" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#e6e9ef">Importer A</text>
+<line x1="870" y1="96" x2="940" y2="96" stroke="#f5a623" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="640" y="142" width="230" height="52" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="755" y="174" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#e6e9ef">Importer B</text>
+<line x1="870" y1="168" x2="940" y2="168" stroke="#f5a623" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="640" y="214" width="230" height="52" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="755" y="246" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#e6e9ef">Searcher</text>
+<line x1="870" y1="240" x2="940" y2="240" stroke="#f5a623" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="640" y="286" width="230" height="52" rx="10" fill="#121722" stroke="#2a3142" stroke-width="1.5"/>
+<text x="755" y="318" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#e6e9ef">Auditor</text>
+<line x1="870" y1="312" x2="940" y2="312" stroke="#f5a623" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="940" y="90" width="220" height="240" rx="12" fill="#17130a" stroke="#f5a623" stroke-width="2"/>
+<text x="962" y="128" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" fill="#f5a623">graph/</text>
+<text x="962" y="166" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">grafx.meta</text>
+<text x="962" y="194" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">catalog.dat</text>
+<text x="962" y="222" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">heap.dat</text>
+<text x="962" y="250" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">index/</text>
+<text x="962" y="278" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">wal/</text>
+<text x="962" y="306" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#d9dde6">system-history.dat</text>
+</svg>

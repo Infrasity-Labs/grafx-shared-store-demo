@@ -1,0 +1,20 @@
+{
+ "note": "Written before any search was run. Not changed afterwards.",
+ "keyword": [
+  {"id": "k01", "text": "password reset email not arriving", "product_id": 1},
+  {"id": "k02", "text": "sync stalls on large folder", "product_id": 1},
+  {"id": "k03", "text": "wrong tax on invoice", "product_id": 2},
+  {"id": "k04", "text": "export csv empty file", "product_id": 2},
+  {"id": "k05", "text": "webhook timeout 504", "product_id": 4},
+  {"id": "k06", "text": "rate limit 429 errors", "product_id": 4},
+  {"id": "k07", "text": "dashboard loads slowly", "product_id": 3},
+  {"id": "k08", "text": "push notifications missing", "product_id": 5},
+  {"id": "k09", "text": "cannot sign in", "product_id": 1},
+  {"id": "k10", "text": "duplicate charge refund", "product_id": 2}
+ ],
+ "phrase": [
+  {"id": "p01", "text": "sync stalls at 99 percent"},
+  {"id": "p02", "text": "wrong tax rate"},
+  {"id": "p03", "text": "webhook returns a 504"}
+ ]
+}

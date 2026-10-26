@@ -1,0 +1,31 @@
+{
+ "elapsed_seconds": 1.268,
+ "grafx_version": "0.0.8",
+ "name": "backup_restore",
+ "result": {
+  "counts_original": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "logical_transfer": {
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "original_dir_bytes": 29031625,
+  "physical_backup": {
+   "code": "unsupported_operation",
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "platform": "darwin"
+ },
+ "step": 9
+}

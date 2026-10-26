@@ -1,0 +1,140 @@
+{
+ "article_diff": {
+  "article_id": 25,
+  "as_of_after": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+   "revision": 2
+  },
+  "as_of_before": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+   "revision": 1
+  },
+  "before_commit_csn": 8130,
+  "correction_csn": 8141,
+  "diff_rows": [
+   {
+    "operation": "updated",
+    "properties": [
+     {
+      "after": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+      "before": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+      "name": "body"
+     },
+     {
+      "after": 2,
+      "before": 1,
+      "name": "revision"
+     }
+    ]
+   }
+  ],
+  "verify_findings": 0,
+  "versions": [
+   {
+    "revision": 1,
+    "system_from": {
+     "database_uuid": "ead20ad9f01447db9ee4181f4b5c5728",
+     "sequence": 305
+    },
+    "system_to": {
+     "database_uuid": "ead20ad9f01447db9ee4181f4b5c5728",
+     "sequence": 8141
+    }
+   },
+   {
+    "revision": 2,
+    "system_from": {
+     "database_uuid": "ead20ad9f01447db9ee4181f4b5c5728",
+     "sequence": 8141
+    },
+    "system_to": null
+   }
+  ]
+ },
+ "backup_restore": {
+  "logical_transfer": {
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "original_dir_bytes": 29031625,
+  "physical_backup": {
+   "code": "unsupported_operation",
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "platform": "darwin"
+ },
+ "crash": {
+  "committed_expected": 20,
+  "committed_tickets_found": 20,
+  "recovery_outcome": "clean",
+  "signal": "SIGKILL",
+  "unfinished_batch_found": 0,
+  "verify_findings": 0
+ },
+ "hybrid": {
+  "questions": 10,
+  "text_top1_tied_with_top2": 0,
+  "top1_changed_no_graph": 5,
+  "top1_changed_with_graph": 7,
+  "top5_set_changed_with_graph": 9
+ },
+ "seconds_by_step": {
+  "1": 0.364,
+  "10": 0.569,
+  "2": 1.656,
+  "3": 5.064,
+  "4": 1.362,
+  "5": 2.379,
+  "6": 3.777,
+  "7": 1.483,
+  "8": 1.805,
+  "9": 1.268
+ },
+ "stale_snapshot": {
+  "new_read_saw_commit": true,
+  "new_read_tickets": 510,
+  "old_snapshot_tickets_after_commit": 500,
+  "old_snapshot_tickets_before": 500,
+  "old_snapshot_unchanged": true
+ },
+ "steps_recorded": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "text_search": {
+  "keyword_questions": 10,
+  "keyword_with_hits": 10,
+  "phrase_questions": 3,
+  "phrase_with_hits": 3
+ },
+ "tickets": {
+  "core_count_in_store_after_step3": 500,
+  "core_count_matches_fixture": true,
+  "core_fixture_count": 500,
+  "final_ticket_count": 530,
+  "step2_loaded": 200,
+  "step3_loaded": 300,
+  "step4_late_batch_loaded": 10,
+  "step5_committed_before_kill": 20
+ },
+ "writers": {
+  "all_commits_durable": true,
+  "conflicts_by_importer": {
+   "A": 1,
+   "B": 5
+  },
+  "conflicts_total": 6,
+  "lost_commits": 0
+ }
+}

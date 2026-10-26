@@ -1,0 +1,37 @@
+{
+ "elapsed_seconds": 5.064,
+ "grafx_version": "0.0.8",
+ "name": "two_writers",
+ "result": {
+  "all_durable": true,
+  "batches_by_importer": {
+   "A": 15,
+   "B": 15
+  },
+  "conflicts_by_importer": {
+   "A": 1,
+   "B": 5
+  },
+  "conflicts_total": 6,
+  "counts_after": {
+   "about": 500,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 500,
+   "opened": 500,
+   "products": 5,
+   "related": 0,
+   "tickets": 500
+  },
+  "fixture_ticket_count": 500,
+  "lost_commits": 0,
+  "pids": {
+   "A": 1263,
+   "B": 1264
+  },
+  "tickets_loaded": 300,
+  "unexpected_ids": 0,
+  "verify_findings": 0
+ },
+ "step": 3
+}
