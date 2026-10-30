@@ -1,0 +1,163 @@
+{
+ "elapsed_seconds": 3.771,
+ "grafx_version": "0.0.8",
+ "result": {
+  "batch_latency_ms": {
+   "count": 80,
+   "max": 1198.243,
+   "mean": 55.262,
+   "min": 19.859,
+   "p50": 28.643,
+   "p95": 75.215,
+   "p99": 1198.243
+  },
+  "commit_latency_ms": {
+   "count": 80,
+   "max": 79.133,
+   "mean": 31.737,
+   "min": 19.848,
+   "p50": 28.617,
+   "p95": 57.664,
+   "p99": 79.133
+  },
+  "config": {
+   "batch_size": 10,
+   "contention": "disjoint",
+   "description": "Low contention on records: 2 writers and 1 reader. Every writer read-modify-writes only its own private hot rows, so no two writers ever touch the same record. Grafx reports write conflicts per partition, not per row, so conflicts can still occur; the result shows how many did.",
+   "hot_records": 5,
+   "links_per_record": 1,
+   "max_attempts": 12,
+   "name": "disjoint-small",
+   "readers": 1,
+   "records_per_writer": 400,
+   "seed": 1,
+   "writers": 2
+  },
+  "conflict_attempt_latency_ms": {
+   "count": 14,
+   "max": 60.398,
+   "mean": 33.748,
+   "min": 14.462,
+   "p50": 31.441,
+   "p95": 60.398,
+   "p99": 60.398
+  },
+  "conflicts": {
+   "attempts_total": 94,
+   "batches_with_retry": 4,
+   "by_writer": {
+    "1": 7,
+    "2": 7
+   },
+   "conflict_rate": 0.1489,
+   "max_retries_in_one_batch": 6,
+   "retry_histogram": {
+    "0": 76,
+    "1": 1,
+    "3": 1,
+    "4": 1,
+    "6": 1
+   },
+   "total": 14
+  },
+  "failed_or_exhausted": {
+   "batches": 0,
+   "by_writer": {
+    "1": 0,
+    "2": 0
+   },
+   "error_samples": [],
+   "errors": []
+  },
+  "integrity": {
+   "checks": {
+    "hot_last_writer": true,
+    "hot_rows_present": true,
+    "hot_version_sum": true,
+    "hot_versions": true,
+    "link_count": true,
+    "link_pairs": true,
+    "no_partial_batches": true,
+    "no_reader_errors": true,
+    "record_count": true,
+    "record_ids": true,
+    "verify_all": true
+   },
+   "numbers": {
+    "committed_batches": 80,
+    "expected_hot_version_sum": 363,
+    "expected_links": 800,
+    "expected_records": 800,
+    "extra_record_ids": 0,
+    "hot_version_mismatch_sample": {},
+    "hot_version_mismatches": 0,
+    "hot_version_sum": 363,
+    "missing_record_ids": 0,
+    "partial_batch_observations": 0,
+    "reader_errors": 0,
+    "stored_links": 800,
+    "stored_records": 800,
+    "verify_findings": 0
+   },
+   "ok": true
+  },
+  "pids": {
+   "orchestrator": 92999,
+   "readers": [
+    93113
+   ],
+   "writers": [
+    93111,
+    93112
+   ]
+  },
+  "read_latency_ms": {
+   "count": 370,
+   "max": 9.701,
+   "mean": 4.385,
+   "min": 0.875,
+   "p50": 4.158,
+   "p95": 8.018,
+   "p99": 9.078
+  },
+  "readers": {
+   "errors": [],
+   "iterations": 370,
+   "lookup_hits": 296,
+   "lookups": 370,
+   "partial_batch_observations": 0
+  },
+  "recovery": {
+   "killed_pid": 93119,
+   "outcome": "ok",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 5070,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 0
+   },
+   "reopen_seconds": 0.0435,
+   "uncommitted_marker_visible": false,
+   "verify_findings": 0,
+   "what": "reopen time after SIGKILL of a process holding an open write transaction, at this store size"
+  },
+  "seed_verify_findings": 0,
+  "store": {
+   "dir_bytes_after": 8681871,
+   "dir_bytes_before": 5469397
+  },
+  "throughput": {
+   "basis": "wall time of the write phase (first writer start to last writer finish)",
+   "batches_committed": 80,
+   "batches_per_second": 31.77,
+   "records_committed": 800,
+   "records_per_second": 317.67,
+   "write_phase_seconds": 2.5183
+  },
+  "wall_seconds": 3.771
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "scenario": "workload:disjoint-small"
+}

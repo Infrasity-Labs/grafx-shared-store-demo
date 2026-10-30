@@ -1,0 +1,695 @@
+{
+ "elapsed_seconds": 4.715,
+ "grafx_version": "0.0.8",
+ "name": "full_text",
+ "result": {
+  "index": "ticket_text on Ticket(subject, body), weights 2.0 and 1.0",
+  "keyword": [
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 50.037144,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 491
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 49.808512,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 275
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.523212,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 218
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.511285,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 2
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.511285,
+      "subject": "Password reset: the password reset email is not arriving",
+      "ticket_id": 284
+     }
+    ],
+    "id": "k01",
+    "query": "password reset email not arriving",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.938994,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 172
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 45.253144,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 307
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 45.253144,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 375
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 44.848615,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 1
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 44.848615,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 90
+     }
+    ],
+    "id": "k02",
+    "query": "sync stalls on large folder",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 35.042619,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 3
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 34.758337,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 2014
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 33.969925,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 10
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 32.918323,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 256
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 32.646524,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 132
+     }
+    ],
+    "id": "k03",
+    "query": "wrong tax on invoice",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 41.222336,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 162
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.868076,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 48
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.528849,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 108
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 37.747864,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 190
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 37.566446,
+      "subject": "Invoice export: export csv gives an empty file for last month",
+      "ticket_id": 96
+     }
+    ],
+    "id": "k04",
+    "query": "export csv empty file",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.297914,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 100
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 38.231341,
+      "subject": "Webhook timeout: the webhook returns a 504 timeout for every event",
+      "ticket_id": 12
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 33.581143,
+      "subject": "Webhook timeout: our server sees the webhook returns a 504 after thirty seconds",
+      "ticket_id": 151
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 33.034977,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 239
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 32.930265,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 231
+     }
+    ],
+    "id": "k05",
+    "query": "webhook timeout 504",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 48.574693,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 456
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 48.386877,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 449
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.320257,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 486
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.115949,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 91
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 46.115949,
+      "subject": "Rate limit: we get rate limit errors 429 during the nightly job",
+      "ticket_id": 138
+     }
+    ],
+    "id": "k06",
+    "query": "rate limit 429 errors",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 41.571392,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 445
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 41.220525,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 250
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 39.597065,
+      "subject": "Dashboard speed: dashboard loads slowly when I add a date filter",
+      "ticket_id": 171
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 39.423597,
+      "subject": "Dashboard speed: dashboard loads slowly when I add a date filter",
+      "ticket_id": 72
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 38.123601,
+      "subject": "Dashboard speed: the dashboard loads slowly on Monday mornings",
+      "ticket_id": 403
+     }
+    ],
+    "id": "k07",
+    "query": "dashboard loads slowly",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 41.002116,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 152
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.24924,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 303
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 39.86721,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 410
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 39.505044,
+      "subject": "Push notification: push notifications are missing on my phone",
+      "ticket_id": 354
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 35.370223,
+      "subject": "Push notification: push notifications arrive hours late",
+      "ticket_id": 409
+     }
+    ],
+    "id": "k08",
+    "query": "push notifications missing",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 24.646452,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 475
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 24.232949,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 331
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 24.232949,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 359
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 24.139028,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 28
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 24.139028,
+      "subject": "Sign in: I cannot sign in on my laptop after the update",
+      "ticket_id": 134
+     }
+    ],
+    "id": "k09",
+    "query": "cannot sign in",
+    "regime": "exact_index"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 37.246659,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2015
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 37.099471,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 2009
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 34.848795,
+      "subject": "Duplicate charge: the duplicate charge needs a refund but the button fails",
+      "ticket_id": 453
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 32.309291,
+      "subject": "Duplicate charge: I see a duplicate charge on the card statement",
+      "ticket_id": 417
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 32.309291,
+      "subject": "Duplicate charge: I see a duplicate charge on the card statement",
+      "ticket_id": 437
+     }
+    ],
+    "id": "k10",
+    "query": "duplicate charge refund",
+    "regime": "exact_index"
+   }
+  ],
+  "phrase": [
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 55.59569,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 172
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 55.59569,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 307
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 55.59569,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 375
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 55.120082,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 1
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 55.120082,
+      "subject": "Sync stall: sync stalls at 99 percent on a large folder",
+      "ticket_id": 90
+     }
+    ],
+    "id": "p01",
+    "query": "sync stalls at 99 percent",
+    "regime": "phrase_verified"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 31.521383,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 3
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 31.255338,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 2014
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 31.000829,
+      "subject": "Invoice tax: wrong tax rate appears on every new invoice",
+      "ticket_id": 10
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 29.865466,
+      "subject": "Invoice tax: the invoice shows the wrong tax rate for my region",
+      "ticket_id": 476
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 29.865466,
+      "subject": "Invoice tax: the invoice shows the wrong tax rate for my region",
+      "ticket_id": 2003
+     }
+    ],
+    "id": "p02",
+    "query": "wrong tax rate",
+    "regime": "phrase_verified"
+   },
+   {
+    "hits": [
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.7266,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 239
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.551933,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 231
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.381095,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 192
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.213959,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 290
+     },
+     {
+      "matched_fields": [
+       "body",
+       "subject"
+      ],
+      "score": 40.213959,
+      "subject": "Webhook timeout: webhook returns a 504 only on large payloads",
+      "ticket_id": 451
+     }
+    ],
+    "id": "p03",
+    "query": "webhook returns a 504",
+    "regime": "phrase_verified"
+   }
+  ],
+  "related_links": {
+   "commits": 10,
+   "edges": 985
+  },
+  "verify_findings": 0
+ },
+ "run_id": "20261029T191341Z-a5ad197-dirty",
+ "step": 6
+}

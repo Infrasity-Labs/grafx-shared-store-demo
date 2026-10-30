@@ -1,0 +1,129 @@
+name: integration
+
+# The full demonstration on a fresh store: all ten steps, then the retrieval evaluation, the resumable
+# import, the support workflow and the small concurrency workloads. It is slower than `validate`, so it
+# only runs when something that can change demo behaviour changes: the code, the fixtures, the
+# workloads, the scripts that check them, the CI itself, and the Grafx pin (requirements.txt), which
+# is how a Grafx version bump reaches it. Nothing here reads the committed demo-state/ outputs.
+on:
+  pull_request:
+    paths:
+      - "ticketgraph/**"
+      - "run_demo.py"
+      - "run_scenarios.py"
+      - "fixtures/**"
+      - "workloads/**"
+      - "node/**"
+      - "scripts/**"
+      - "tests/**"
+      - "docker/**"
+      - "requirements.txt"
+      - ".github/workflows/integration.yml"
+  push:
+    branches: [main]
+    paths:
+      - "ticketgraph/**"
+      - "run_demo.py"
+      - "run_scenarios.py"
+      - "fixtures/**"
+      - "workloads/**"
+      - "node/**"
+      - "scripts/**"
+      - "tests/**"
+      - "docker/**"
+      - "requirements.txt"
+      - ".github/workflows/integration.yml"
+  workflow_dispatch:
+
+jobs:
+  full-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      RUN_ID: ci-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the pinned Grafx
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -c "import okto_grafx; print(okto_grafx.__version__)"
+
+      - name: Say if the Grafx pin changed
+        if: github.event_name == 'pull_request'
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          old="$(git show "$base:requirements.txt" | sed -n 's/^okto-grafx==//p')"
+          new="$(sed -n 's/^okto-grafx==//p' requirements.txt)"
+          if [ "$old" != "$new" ]; then
+            echo "### Grafx version bump: $old to $new" >> "$GITHUB_STEP_SUMMARY"
+            echo "This run is the check that the demo still works on $new. Update docs/VERIFIED.md and docs/PRODUCT-OBSERVATIONS.md with what changed." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Steps 1 to 10 on a fresh store
+        run: >
+          python run_demo.py
+          --workdir "$RUNNER_TEMP/work"
+          --state-dir "$RUNNER_TEMP/run"
+          --run-id "$RUN_ID"
+          --label ci-full
+
+      - name: Scenarios (evaluation, resumable import, support workflow, workloads)
+        run: >
+          python run_scenarios.py all
+          --workdir "$RUNNER_TEMP/scenarios"
+          --state-dir "$RUNNER_TEMP/run"
+          --run-id "$RUN_ID"
+          --label ci-full
+
+      - name: Check the outcomes of this run
+        run: python scripts/assert_full_run.py "$RUNNER_TEMP/run" --summary "$GITHUB_STEP_SUMMARY"
+
+      - name: Name the failing step
+        if: failure()
+        run: |
+          f="$RUNNER_TEMP/run/failure.json"
+          if [ -f "$f" ]; then
+            python - "$f" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1]))
+          where = f"step {d['step']} ({d['name']})" if "step" in d else f"scenario {d['scenario']}"
+          print(f"::error title=Integration run failed in {where}::{d['error_type']}: {d['message']}")
+          print(d["traceback"])
+          PY
+          else
+            echo "No failure.json: the failure was in a check, see the step above."
+          fi
+
+      - name: Pack the stores for diagnosis
+        if: failure()
+        run: |
+          mkdir -p "$RUNNER_TEMP/diagnostics"
+          tar -czf "$RUNNER_TEMP/diagnostics/stores.tgz" -C "$RUNNER_TEMP" work scenarios 2>/dev/null || true
+
+      - name: Upload the run folder
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-run-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/run
+          retention-days: 30
+
+      - name: Upload the stores
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-stores-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/diagnostics
+          retention-days: 7

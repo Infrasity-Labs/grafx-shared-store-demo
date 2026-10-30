@@ -1,6 +1,8 @@
-"""Build demo-state/closeout-result.json from the recorded step outputs only."""
+"""Build the closeout scoreboard (closeout-result.json) from the recorded step outputs of one run only."""
 import json
 from pathlib import Path
+
+from . import runs
 
 STEP_FILES = {
     1: "step01_setup.json", 2: "step02_first_load.json", 3: "step03_two_writers.json",
@@ -24,9 +26,27 @@ def top_ids(results):
     return {r["id"]: (r["hits"][0]["ticket_id"] if r["hits"] else None) for r in results}
 
 
+def run_reference(state_dir, steps):
+    """The run the scoreboard summarises. None for outputs recorded before run ids existed (no manifest)."""
+    manifest = runs.load_manifest(state_dir)
+    if manifest is None:
+        return None
+    mixed = {n: d["run_id"] for n, d in steps.items() if d.get("run_id") != manifest["run_id"]}
+    if mixed:
+        raise ValueError(f"step outputs from another run than manifest run {manifest['run_id']}: {mixed}")
+    return {"run_id": manifest["run_id"], "manifest": runs.MANIFEST, "label": manifest["label"],
+            "grafx_version": manifest["grafx_version"], "platform": manifest["platform"],
+            "python": manifest["python"], "commit": manifest["commit"],
+            "step_files": [STEP_FILES[n] for n in sorted(steps)]}
+
+
 def build(state_dir):
     s = load_steps(state_dir)
-    board = {"steps_recorded": sorted(s)}
+    board = {}
+    run = run_reference(state_dir, s)
+    if run is not None:
+        board["run"] = run
+    board["steps_recorded"] = sorted(s)
 
     if 2 in s and 3 in s:
         r2, r3, r5, r4 = s[2]["result"], s[3]["result"], s.get(5, {}).get("result", {}), s.get(4, {}).get("result", {})
@@ -77,7 +97,7 @@ def build(state_dir):
     if 8 in s:
         board["article_diff"] = s[8]["result"]
     if 9 in s:
-        board["backup_restore"] = {k: s[9]["result"][k] for k in s[9]["result"] if k != "counts_original"}
+        board["backup_restore"] = {k: s[9]["result"][k] for k in s[9]["result"] if k not in ("counts_original", "digests")}
     board["seconds_by_step"] = {str(n): s[n]["elapsed_seconds"] for n in sorted(s)}
     return board
 

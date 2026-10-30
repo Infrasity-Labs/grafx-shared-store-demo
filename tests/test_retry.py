@@ -92,6 +92,19 @@ class RetryLoop(unittest.TestCase):
             write_with_conflict_retry(db, lambda txn: None, pause=lambda s: None)
         self.assertEqual(db.begins, 1)
 
+    def test_on_attempt_reports_every_attempt_with_its_outcome(self):
+        db = FakeDb([GrafxWriteConflict("a"), ValueError("boom")])
+        seen = []
+        with self.assertRaises(ValueError):
+            write_with_conflict_retry(db, lambda txn: None, pause=lambda s: None,
+                                      on_attempt=lambda n, secs, outcome: seen.append((n, outcome, secs >= 0)))
+        self.assertEqual(seen, [(1, "conflict", True), (2, "error", True)])
+        db = FakeDb([GrafxWriteConflict("a")])
+        seen = []
+        write_with_conflict_retry(db, lambda txn: None, pause=lambda s: None,
+                                  on_attempt=lambda n, secs, outcome: seen.append((n, outcome)))
+        self.assertEqual(seen, [(1, "conflict"), (2, "committed")])
+
     def test_attempts_must_be_positive(self):
         with self.assertRaises(ValueError):
             write_with_conflict_retry(FakeDb([]), lambda txn: None, attempts=0)

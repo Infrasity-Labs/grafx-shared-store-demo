@@ -1,0 +1,1389 @@
+{
+ "rule": "Triaged tickets are a seeded random half of each incident's tickets. A triaged ticket is linked to 2 tickets of a different feature of the same incident. One in ten triaged tickets also gets one wrong link to a ticket outside the incident (kind misfiled). Seed 20260202.",
+ "incidents": [
+  {
+   "id": 1,
+   "name": "Identity service outage",
+   "root_cause": "The shared sign-in token service rejected valid tokens",
+   "features": [
+    1,
+    27,
+    35
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Email provider degradation",
+   "root_cause": "The outbound email provider delayed or dropped messages",
+   "features": [
+    2,
+    14,
+    23
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Storage backend migration",
+   "root_cause": "Uploads and quota accounting were disturbed by a storage backend migration",
+   "features": [
+    3,
+    8,
+    36
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Rates and tax feed outage",
+   "root_cause": "The tax and exchange rate feed returned stale or partial data",
+   "features": [
+    9,
+    15,
+    12
+   ]
+  }
+ ],
+ "members": [
+  {
+   "ticket": 28,
+   "incident": 1
+  },
+  {
+   "ticket": 122,
+   "incident": 1
+  },
+  {
+   "ticket": 134,
+   "incident": 1
+  },
+  {
+   "ticket": 179,
+   "incident": 1
+  },
+  {
+   "ticket": 331,
+   "incident": 1
+  },
+  {
+   "ticket": 389,
+   "incident": 1
+  },
+  {
+   "ticket": 420,
+   "incident": 1
+  },
+  {
+   "ticket": 429,
+   "incident": 1
+  },
+  {
+   "ticket": 182,
+   "incident": 1
+  },
+  {
+   "ticket": 185,
+   "incident": 1
+  },
+  {
+   "ticket": 198,
+   "incident": 1
+  },
+  {
+   "ticket": 214,
+   "incident": 1
+  },
+  {
+   "ticket": 406,
+   "incident": 1
+  },
+  {
+   "ticket": 430,
+   "incident": 1
+  },
+  {
+   "ticket": 74,
+   "incident": 1
+  },
+  {
+   "ticket": 252,
+   "incident": 1
+  },
+  {
+   "ticket": 271,
+   "incident": 1
+  },
+  {
+   "ticket": 367,
+   "incident": 1
+  },
+  {
+   "ticket": 120,
+   "incident": 2
+  },
+  {
+   "ticket": 205,
+   "incident": 2
+  },
+  {
+   "ticket": 218,
+   "incident": 2
+  },
+  {
+   "ticket": 275,
+   "incident": 2
+  },
+  {
+   "ticket": 371,
+   "incident": 2
+  },
+  {
+   "ticket": 399,
+   "incident": 2
+  },
+  {
+   "ticket": 412,
+   "incident": 2
+  },
+  {
+   "ticket": 491,
+   "incident": 2
+  },
+  {
+   "ticket": 34,
+   "incident": 2
+  },
+  {
+   "ticket": 126,
+   "incident": 2
+  },
+  {
+   "ticket": 193,
+   "incident": 2
+  },
+  {
+   "ticket": 195,
+   "incident": 2
+  },
+  {
+   "ticket": 240,
+   "incident": 2
+  },
+  {
+   "ticket": 313,
+   "incident": 2
+  },
+  {
+   "ticket": 314,
+   "incident": 2
+  },
+  {
+   "ticket": 396,
+   "incident": 2
+  },
+  {
+   "ticket": 413,
+   "incident": 2
+  },
+  {
+   "ticket": 415,
+   "incident": 2
+  },
+  {
+   "ticket": 129,
+   "incident": 2
+  },
+  {
+   "ticket": 200,
+   "incident": 2
+  },
+  {
+   "ticket": 342,
+   "incident": 2
+  },
+  {
+   "ticket": 473,
+   "incident": 2
+  },
+  {
+   "ticket": 90,
+   "incident": 3
+  },
+  {
+   "ticket": 136,
+   "incident": 3
+  },
+  {
+   "ticket": 225,
+   "incident": 3
+  },
+  {
+   "ticket": 307,
+   "incident": 3
+  },
+  {
+   "ticket": 421,
+   "incident": 3
+  },
+  {
+   "ticket": 426,
+   "incident": 3
+  },
+  {
+   "ticket": 82,
+   "incident": 3
+  },
+  {
+   "ticket": 86,
+   "incident": 3
+  },
+  {
+   "ticket": 113,
+   "incident": 3
+  },
+  {
+   "ticket": 216,
+   "incident": 3
+  },
+  {
+   "ticket": 230,
+   "incident": 3
+  },
+  {
+   "ticket": 358,
+   "incident": 3
+  },
+  {
+   "ticket": 394,
+   "incident": 3
+  },
+  {
+   "ticket": 93,
+   "incident": 3
+  },
+  {
+   "ticket": 155,
+   "incident": 3
+  },
+  {
+   "ticket": 308,
+   "incident": 3
+  },
+  {
+   "ticket": 416,
+   "incident": 3
+  },
+  {
+   "ticket": 444,
+   "incident": 3
+  },
+  {
+   "ticket": 460,
+   "incident": 3
+  },
+  {
+   "ticket": 3,
+   "incident": 4
+  },
+  {
+   "ticket": 52,
+   "incident": 4
+  },
+  {
+   "ticket": 131,
+   "incident": 4
+  },
+  {
+   "ticket": 251,
+   "incident": 4
+  },
+  {
+   "ticket": 256,
+   "incident": 4
+  },
+  {
+   "ticket": 476,
+   "incident": 4
+  },
+  {
+   "ticket": 489,
+   "incident": 4
+  },
+  {
+   "ticket": 41,
+   "incident": 4
+  },
+  {
+   "ticket": 58,
+   "incident": 4
+  },
+  {
+   "ticket": 96,
+   "incident": 4
+  },
+  {
+   "ticket": 288,
+   "incident": 4
+  },
+  {
+   "ticket": 291,
+   "incident": 4
+  },
+  {
+   "ticket": 467,
+   "incident": 4
+  },
+  {
+   "ticket": 137,
+   "incident": 4
+  },
+  {
+   "ticket": 145,
+   "incident": 4
+  },
+  {
+   "ticket": 215,
+   "incident": 4
+  },
+  {
+   "ticket": 217,
+   "incident": 4
+  },
+  {
+   "ticket": 236,
+   "incident": 4
+  },
+  {
+   "ticket": 249,
+   "incident": 4
+  },
+  {
+   "ticket": 287,
+   "incident": 4
+  },
+  {
+   "ticket": 351,
+   "incident": 4
+  },
+  {
+   "ticket": 360,
+   "incident": 4
+  },
+  {
+   "ticket": 370,
+   "incident": 4
+  },
+  {
+   "ticket": 484,
+   "incident": 4
+  }
+ ],
+ "links": [
+  {
+   "a": 28,
+   "b": 191,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 28,
+   "b": 246,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 122,
+   "b": 20,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 122,
+   "b": 468,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 134,
+   "b": 246,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 134,
+   "b": 4,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 179,
+   "b": 468,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 179,
+   "b": 336,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 331,
+   "b": 252,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 331,
+   "b": 224,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 389,
+   "b": 185,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 389,
+   "b": 468,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 420,
+   "b": 271,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 420,
+   "b": 214,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 429,
+   "b": 430,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 429,
+   "b": 361,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 182,
+   "b": 277,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 182,
+   "b": 319,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 185,
+   "b": 28,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 185,
+   "b": 122,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 198,
+   "b": 319,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 198,
+   "b": 490,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 214,
+   "b": 74,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 406,
+   "b": 271,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 406,
+   "b": 252,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 430,
+   "b": 223,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 74,
+   "b": 406,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 74,
+   "b": 144,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 252,
+   "b": 380,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 252,
+   "b": 430,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 271,
+   "b": 20,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 271,
+   "b": 160,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 367,
+   "b": 246,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 367,
+   "b": 430,
+   "incident": 1,
+   "kind": "same_incident"
+  },
+  {
+   "a": 120,
+   "b": 29,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 120,
+   "b": 32,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 205,
+   "b": 415,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 205,
+   "b": 154,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 205,
+   "b": 406,
+   "incident": 2,
+   "kind": "misfiled"
+  },
+  {
+   "a": 218,
+   "b": 414,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 218,
+   "b": 34,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 275,
+   "b": 240,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 275,
+   "b": 75,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 371,
+   "b": 415,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 371,
+   "b": 97,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 399,
+   "b": 129,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 399,
+   "b": 29,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 412,
+   "b": 254,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 412,
+   "b": 428,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 412,
+   "b": 252,
+   "incident": 2,
+   "kind": "misfiled"
+  },
+  {
+   "a": 491,
+   "b": 154,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 491,
+   "b": 240,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 491,
+   "b": 219,
+   "incident": 2,
+   "kind": "misfiled"
+  },
+  {
+   "a": 34,
+   "b": 56,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 34,
+   "b": 97,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 126,
+   "b": 412,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 126,
+   "b": 357,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 193,
+   "b": 65,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 193,
+   "b": 129,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 195,
+   "b": 455,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 195,
+   "b": 275,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 240,
+   "b": 29,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 313,
+   "b": 129,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 313,
+   "b": 99,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 314,
+   "b": 95,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 314,
+   "b": 473,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 396,
+   "b": 405,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 396,
+   "b": 342,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 413,
+   "b": 201,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 413,
+   "b": 200,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 415,
+   "b": 87,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 415,
+   "b": 275,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 129,
+   "b": 65,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 129,
+   "b": 2,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 200,
+   "b": 455,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 200,
+   "b": 95,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 342,
+   "b": 163,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 342,
+   "b": 2,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 473,
+   "b": 65,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 473,
+   "b": 415,
+   "incident": 2,
+   "kind": "same_incident"
+  },
+  {
+   "a": 90,
+   "b": 63,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 90,
+   "b": 216,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 136,
+   "b": 230,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 136,
+   "b": 301,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 225,
+   "b": 49,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 225,
+   "b": 155,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 225,
+   "b": 346,
+   "incident": 3,
+   "kind": "misfiled"
+  },
+  {
+   "a": 307,
+   "b": 86,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 307,
+   "b": 394,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 421,
+   "b": 158,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 421,
+   "b": 494,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 426,
+   "b": 301,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 426,
+   "b": 6,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 82,
+   "b": 245,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 82,
+   "b": 308,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 86,
+   "b": 338,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 86,
+   "b": 340,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 113,
+   "b": 245,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 113,
+   "b": 225,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 216,
+   "b": 444,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 216,
+   "b": 376,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 230,
+   "b": 444,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 230,
+   "b": 225,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 230,
+   "b": 265,
+   "incident": 3,
+   "kind": "misfiled"
+  },
+  {
+   "a": 358,
+   "b": 173,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 358,
+   "b": 93,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 394,
+   "b": 340,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 93,
+   "b": 394,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 155,
+   "b": 375,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 155,
+   "b": 49,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 308,
+   "b": 230,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 308,
+   "b": 375,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 416,
+   "b": 216,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 416,
+   "b": 63,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 444,
+   "b": 279,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 444,
+   "b": 63,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 460,
+   "b": 113,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 460,
+   "b": 494,
+   "incident": 3,
+   "kind": "same_incident"
+  },
+  {
+   "a": 3,
+   "b": 96,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 3,
+   "b": 145,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 52,
+   "b": 145,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 52,
+   "b": 351,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 131,
+   "b": 11,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 131,
+   "b": 288,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 251,
+   "b": 58,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 251,
+   "b": 411,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 256,
+   "b": 467,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 256,
+   "b": 111,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 256,
+   "b": 429,
+   "incident": 4,
+   "kind": "misfiled"
+  },
+  {
+   "a": 476,
+   "b": 387,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 476,
+   "b": 11,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 489,
+   "b": 48,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 489,
+   "b": 215,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 489,
+   "b": 242,
+   "incident": 4,
+   "kind": "misfiled"
+  },
+  {
+   "a": 41,
+   "b": 370,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 41,
+   "b": 476,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 58,
+   "b": 215,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 58,
+   "b": 256,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 96,
+   "b": 411,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 96,
+   "b": 476,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 288,
+   "b": 3,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 288,
+   "b": 61,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 291,
+   "b": 370,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 291,
+   "b": 332,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 467,
+   "b": 215,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 467,
+   "b": 387,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 137,
+   "b": 212,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 137,
+   "b": 356,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 145,
+   "b": 132,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 145,
+   "b": 251,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 215,
+   "b": 55,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 215,
+   "b": 332,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 217,
+   "b": 212,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 217,
+   "b": 3,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 236,
+   "b": 55,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 236,
+   "b": 332,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 249,
+   "b": 291,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 249,
+   "b": 41,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 287,
+   "b": 11,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 287,
+   "b": 256,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 287,
+   "b": 257,
+   "incident": 4,
+   "kind": "misfiled"
+  },
+  {
+   "a": 351,
+   "b": 48,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 360,
+   "b": 280,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 360,
+   "b": 41,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 370,
+   "b": 108,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 370,
+   "b": 10,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 484,
+   "b": 332,
+   "incident": 4,
+   "kind": "same_incident"
+  },
+  {
+   "a": 484,
+   "b": 356,
+   "incident": 4,
+   "kind": "same_incident"
+  }
+ ]
+}

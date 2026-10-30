@@ -24,8 +24,8 @@ LINKS = [
 ]
 
 
-def load_static(db):
-    """Products, customers and articles, in one commit."""
+def static_operation():
+    """The write that loads products, customers and articles. Returns (operation, counts)."""
     products = json.loads((FIXTURES / "products.json").read_text())
     customers = json.loads((FIXTURES / "customers.json").read_text())
     articles = read_jsonl(FIXTURES / "articles.jsonl")
@@ -37,10 +37,15 @@ def load_static(db):
         txn.executemany("MATCH (c:Customer {id: $id}), (p:Product {id: $product_id}) CREATE (c)-[:Uses]->(p)", customers)
         txn.executemany("MATCH (a:Article {id: $id}), (p:Product {id: $product_id}) CREATE (a)-[:Covers]->(p)", articles)
 
+    return operation, {"products": len(products), "customers": len(customers), "articles": len(articles)}
+
+
+def load_static(db):
+    """Products, customers and articles, in one commit."""
+    operation, counts = static_operation()
     report, conflicts = write_with_conflict_retry(db, operation)
     assert report.durable
-    return {"durable": report.durable, "conflicts": conflicts,
-            "products": len(products), "customers": len(customers), "articles": len(articles)}
+    return dict({"durable": report.durable, "conflicts": conflicts}, **counts)
 
 
 def batch_operation(rows, vectors, hold=None):

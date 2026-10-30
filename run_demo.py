@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Replay the ten demo steps.
 
+    python run_demo.py                          all ten steps, outputs in runs/<run id>/
     python run_demo.py --steps 1 2 3 4
-    python run_demo.py --start 5
+    python run_demo.py --start 5 --run-id ID    continue run ID from step 5
     python run_demo.py --dry-run
+
+Every run gets a run id and a run-manifest.json (Grafx version, platform, Python, commit, configuration).
+Outputs go to runs/<run id>/ so that the committed reference in demo-state/ is never overwritten. The
+scoreboard names the run it summarises. Compare two runs with scripts/compare_runs.py.
 
 --dry-run prints every command and needs no Grafx install.
 """
@@ -11,6 +16,7 @@ import argparse
 import json
 import sys
 import time
+import traceback
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -55,7 +61,11 @@ def main(argv=None):
     ap.add_argument("--start", type=int, metavar="N", help="run step N and every step after it")
     ap.add_argument("--dry-run", action="store_true", help="print the commands and exit")
     ap.add_argument("--workdir", default=str(ROOT / "live-store"), help="where the store, backup and restore live")
-    ap.add_argument("--state-dir", default=str(ROOT / "demo-state"), help="where recorded outputs are written")
+    ap.add_argument("--state-dir", help="where recorded outputs are written (default: runs/<run id>)")
+    ap.add_argument("--run-id", help="name of this run (default: UTC time and short commit)")
+    ap.add_argument("--label", default="local", help="free text kept in the manifest, e.g. ci or release-check")
+    ap.add_argument("--force-overwrite", action="store_true",
+                    help="write into a folder that already holds outputs without a manifest (the reference)")
     args = ap.parse_args(argv)
 
     if args.steps:
@@ -79,24 +89,45 @@ def main(argv=None):
     # Grafx is imported only for a real run, so a dry run needs no install.
     sys.path.insert(0, str(ROOT))
     import okto_grafx
-    from ticketgraph import scoreboard
+    from ticketgraph import runs, scoreboard
     from ticketgraph.common import dump_json
     from ticketgraph.steps import STEPS, Ctx
 
-    ctx = Ctx(args.workdir, args.state_dir)
+    run_id = runs.check_run_id(args.run_id) if args.run_id else runs.new_run_id()
+    state_dir = Path(args.state_dir) if args.state_dir else ROOT / "runs" / run_id
+    config = {"steps": chosen, "arguments": runs.sanitize_args(sys.argv[1:] if argv is None else list(argv))}
+    prior = (runs.load_manifest(state_dir) or {}).get("status")
+    if args.force_overwrite:
+        state_dir.mkdir(parents=True, exist_ok=True)
+        if runs.load_manifest(state_dir) is None:
+            runs.write_manifest(state_dir, runs.build_manifest(run_id, args.label, config, okto_grafx.__version__))
+    else:
+        runs.start_or_resume(state_dir, run_id, args.label, config, okto_grafx.__version__)
+    print(f"Run {run_id} -> {state_dir}", flush=True)
+
+    ctx = Ctx(args.workdir, state_dir)
     for n in chosen:
         name, fn = STEPS[n]
         print(f"Step {n}: {STEP_NAMES[n][1]}", flush=True)
         started = time.perf_counter()
-        result = fn(ctx)
+        try:
+            result = fn(ctx)
+        except BaseException as error:
+            dump_json(ctx.state_dir / runs.FAILURE, {
+                "run_id": run_id, "step": n, "name": name, "error_type": type(error).__name__,
+                "message": str(error), "traceback": traceback.format_exc()})
+            runs.finish(ctx.state_dir, "failed")
+            print(f"FAILED at step {n} ({name}): {type(error).__name__}: {error}", file=sys.stderr, flush=True)
+            raise
         elapsed = round(time.perf_counter() - started, 3)
         dump_json(ctx.state_dir / STEP_NAMES[n][0], {
-            "step": n, "name": name, "grafx_version": okto_grafx.__version__,
+            "step": n, "name": name, "run_id": run_id, "grafx_version": okto_grafx.__version__,
             "elapsed_seconds": elapsed, "result": result})
         print(f"  done in {elapsed}s -> {STEP_NAMES[n][0]}", flush=True)
     if 10 in chosen:
         dump_json(ctx.state_dir / "closeout-result.json", scoreboard.build(ctx.state_dir))
         print("  scoreboard -> closeout-result.json")
+    runs.finish(ctx.state_dir, runs.status_after(prior, 10 in chosen))
     return 0
 
 

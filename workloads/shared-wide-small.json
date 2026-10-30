@@ -1,0 +1,13 @@
+{
+ "name": "shared-wide-small",
+ "description": "Moderate contention: 4 writers and 1 reader sharing a pool of 50 hot rows, each batch touching a few of them at random. Expect some write conflicts, fewer than shared-hot-small, since two batches only collide when they pick an overlapping hot row.",
+ "writers": 4,
+ "readers": 1,
+ "records_per_writer": 400,
+ "batch_size": 10,
+ "links_per_record": 1,
+ "contention": "shared",
+ "hot_records": 50,
+ "max_attempts": 12,
+ "seed": 1
+}

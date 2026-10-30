@@ -1,0 +1,13 @@
+{
+ "name": "shared-hot-small",
+ "description": "High contention: 4 writers and 1 reader, all read-modify-writing the same 2 shared hot rows in every batch. Expect many write conflicts, retries with backoff, higher batch latency than commit latency, and possibly exhausted retry budgets; committed work must still be exactly accounted for.",
+ "writers": 4,
+ "readers": 1,
+ "records_per_writer": 400,
+ "batch_size": 10,
+ "links_per_record": 2,
+ "contention": "shared",
+ "hot_records": 2,
+ "max_attempts": 12,
+ "seed": 1
+}

@@ -1,6 +1,15 @@
 """Write the invented fixture files. Deterministic: same seed, same files.
 
 Every name, product and ticket here is made up for this demo.
+
+Two groups of files come out of this script:
+
+1. The original demo fixtures (products, customers, articles, three ticket files). They use one
+   random generator, seeded with SEED, in a fixed call order. Do not reorder those calls: the
+   recorded outputs in demo-state/ depend on these exact files.
+2. The retrieval-evaluation fixtures (incident_graph.json, eval_questions.json, eval_qrels.json,
+   incoming_tickets.json). They use their own generators (SEED_INCIDENT_GRAPH) and never touch the
+   first group. How relevance labels are made is described next to EVAL_QUESTIONS below.
 """
 import json
 import random
@@ -121,6 +130,178 @@ def tickets(rng, start_id, count):
     return rows
 
 
+# ---------------------------------------------------------------------------------------------
+# Retrieval evaluation fixtures
+#
+# Where the labels come from (this is the whole labelling rule, nothing else is used):
+#
+# * Every core ticket (tickets.jsonl) was generated from one feature, and records it as article_id.
+#   That field exists independently of any search and is never passed to a retrieval strategy.
+# * An INCIDENT below is an invented root cause that explains symptoms in several features, often
+#   in several products (for example one identity-service outage that shows up as sign-in
+#   failures, rejected API keys and broken biometric login). Incidents are defined here, once,
+#   before any search runs. A feature belongs to at most one incident.
+# * Each evaluation question has an intent chosen by whoever wrote the question:
+#     "feature":  the person wants tickets about the same problem. Relevant tickets are the
+#                 tickets whose article_id is that feature. Relevant article: that feature's article.
+#     "incident": the person wants every ticket caused by the same outage. Relevant tickets are the
+#                 tickets of ALL features of the incident. Relevant articles: those features' articles.
+# * eval_qrels.json is computed from those rules by qrels() below. Nobody edits it by hand.
+#
+# The question texts were written by hand by the author of this script and were not compared with
+# search results. The labels were NOT reviewed by a second person or by a domain expert. They are
+# labels by construction on invented data, not human relevance judgements.
+#
+# The graph the retrieval can use (see INCIDENT_LINKS rule below) records "a triage engineer linked
+# ticket a to ticket b because they come from the same outage". Because the incident definition is
+# also the source of the "incident" labels, a perfect link set would let a graph recover those
+# labels. The links are therefore deliberately partial and partly wrong (rule below), and the
+# evaluation reports how much of that a ranker actually gets from them.
+# ---------------------------------------------------------------------------------------------
+SEED_INCIDENT_GRAPH = 20260202
+
+# (id, name, root cause, feature names)
+INCIDENTS = [
+    (1, "Identity service outage", "The shared sign-in token service rejected valid tokens",
+     ["sign in", "api key", "biometric login"]),
+    (2, "Email provider degradation", "The outbound email provider delayed or dropped messages",
+     ["password reset", "dunning email", "alert rule"]),
+    (3, "Storage backend migration", "Uploads and quota accounting were disturbed by a storage backend migration",
+     ["sync stall", "storage quota", "photo upload"]),
+    (4, "Rates and tax feed outage", "The tax and exchange rate feed returned stale or partial data",
+     ["invoice tax", "currency", "invoice export"]),
+]
+TRIAGED_SHARE = 0.5        # share of an incident's tickets that a triage engineer looked at
+LINKS_PER_TRIAGED = 2      # same-incident links a triaged ticket gets, to tickets of a different feature
+MISFILED_SHARE = 0.1       # share of triaged tickets that also get one wrong link to a non-incident ticket
+
+# (id, text, intent, feature name for "feature" intent or incident id for "incident" intent)
+EVAL_QUESTIONS = [
+    ("f01", "reset password link never reaches my inbox", "feature", "password reset"),
+    ("f02", "folder upload frozen near the end", "feature", "sync stall"),
+    ("f03", "tax amount on invoices is incorrect", "feature", "invoice tax"),
+    ("f04", "customer billed two times for the same invoice", "feature", "duplicate charge"),
+    ("f05", "refund is stuck and has not arrived", "feature", "refund"),
+    ("f06", "csv download of invoices comes out blank", "feature", "invoice export"),
+    ("f07", "dashboard is very slow to open", "feature", "dashboard speed"),
+    ("f08", "weekly report email did not come", "feature", "scheduled report"),
+    ("f09", "callbacks to our endpoint time out with a 504", "feature", "webhook timeout"),
+    ("f10", "too many requests error during batch jobs", "feature", "rate limit"),
+    ("f11", "api credential rejected as invalid", "feature", "api key"),
+    ("f12", "events are not redelivered after a failure", "feature", "webhook retry"),
+    ("f13", "certificate expired on our custom domain", "feature", "tls certificate"),
+    ("f14", "push alerts do not show up on my phone", "feature", "push notification"),
+    ("f15", "app forgets my changes when there is no connection", "feature", "offline mode"),
+    ("f16", "face recognition login stopped working", "feature", "biometric login"),
+    ("f17", "battery drains fast because of the app", "feature", "battery"),
+    ("f18", "app closes immediately when opening settings", "feature", "app crash"),
+    ("f19", "two versions of a file created after being offline", "feature", "sync conflict"),
+    ("f20", "currency symbol on invoice is wrong", "feature", "currency"),
+    ("f21", "cannot log in on a second computer", "feature", "sign in"),
+    ("f22", "reminder emails sent after payment", "feature", "dunning email"),
+    ("f23", "storage full warning but plenty of space left", "feature", "storage quota"),
+    ("f24", "photos stop uploading on cellular", "feature", "photo upload"),
+    ("i01", "users cannot authenticate since this morning", "incident", 1),
+    ("i02", "login keeps failing and sessions expire", "incident", 1),
+    ("i03", "credentials rejected across our apps", "incident", 1),
+    ("i04", "transactional emails are not being delivered", "incident", 2),
+    ("i05", "email sent late or never arrives", "incident", 2),
+    ("i06", "notification emails delayed by an hour", "incident", 2),
+    ("i07", "uploads and syncing hang at the end", "incident", 3),
+    ("i08", "storage usage numbers look wrong and transfers stall", "incident", 3),
+    ("i09", "files stop uploading halfway", "incident", 3),
+    ("i10", "invoices show wrong amounts", "incident", 4),
+    ("i11", "incorrect tax and currency values on invoices", "incident", 4),
+    ("i12", "invoice numbers and columns are off", "incident", 4),
+]
+
+# Workflow demo: new tickets that arrive while the support workflow runs. Invented. Ids 3001 and up.
+# customer_id is known from the account. Nothing else about the ticket is known when it arrives:
+# the product is taken from the customer's account and the article is chosen later by triage.
+INCOMING_TICKETS = [
+    {"id": 3001, "customer_id": 6, "subject": "Login fails on all our devices",
+     "body": "Hello, since this morning nobody in our office can log in and the session expires right away. "
+             "We have not changed any settings.", "priority": "medium", "status": "open"},
+    {"id": 3002, "customer_id": 12, "subject": "Report layout question",
+     "body": "Hi, the scheduled report arrives with a different column order than last month. "
+             "Can you tell us how to fix the order?", "priority": "low", "status": "open"},
+]
+
+
+def feature_article_ids():
+    return {feature: i for i, (_, feature, *_rest) in enumerate(FEATURES, start=1)}
+
+
+def incident_features():
+    """Incident id -> list of article ids, resolved from feature names."""
+    by_name = feature_article_ids()
+    return {iid: [by_name[f] for f in names] for iid, _name, _cause, names in INCIDENTS}
+
+
+def qrels(ticket_rows):
+    """Question id -> relevant ticket ids and article ids, from the rules above."""
+    by_name = feature_article_ids()
+    inc_features = incident_features()
+    out = {}
+    for qid, _text, intent, target in EVAL_QUESTIONS:
+        articles = [by_name[target]] if intent == "feature" else sorted(inc_features[target])
+        tickets = sorted(t["id"] for t in ticket_rows if t["article_id"] in articles)
+        out[qid] = {"intent": intent, "target": target, "tickets": tickets, "articles": articles}
+    return out
+
+
+def incident_graph(ticket_rows):
+    """The recorded incident links: which tickets a triage engineer attached to an incident, and the
+    ticket-to-ticket links they drew. Deterministic for SEED_INCIDENT_GRAPH."""
+    rng = random.Random(SEED_INCIDENT_GRAPH)
+    inc_features = incident_features()
+    all_features = set(range(1, len(FEATURES) + 1))
+    by_feature = {}
+    for t in ticket_rows:
+        by_feature.setdefault(t["article_id"], []).append(t["id"])
+    members, links = [], []
+    seen = set()
+    for iid, _name, _cause, _features in INCIDENTS:
+        feats = inc_features[iid]
+        outside = sorted(i for f in all_features - set(feats) for i in by_feature.get(f, []))
+        incident_tickets = sorted((f, i) for f in feats for i in by_feature.get(f, []))
+        for feature, ticket in incident_tickets:
+            if rng.random() >= TRIAGED_SHARE:
+                continue
+            members.append({"ticket": ticket, "incident": iid})
+            other_feature_tickets = [i for f, i in incident_tickets if f != feature]
+            for other in rng.sample(other_feature_tickets, min(LINKS_PER_TRIAGED, len(other_feature_tickets))):
+                key = frozenset((ticket, other))
+                if key not in seen:
+                    seen.add(key)
+                    links.append({"a": ticket, "b": other, "incident": iid, "kind": "same_incident"})
+            if rng.random() < MISFILED_SHARE:
+                other = rng.choice(outside)
+                key = frozenset((ticket, other))
+                if key not in seen:
+                    seen.add(key)
+                    links.append({"a": ticket, "b": other, "incident": iid, "kind": "misfiled"})
+    return {
+        "rule": ("Triaged tickets are a seeded random half of each incident's tickets. A triaged ticket is linked "
+                 "to 2 tickets of a different feature of the same incident. One in ten triaged tickets also gets "
+                 "one wrong link to a ticket outside the incident (kind misfiled). Seed " + str(SEED_INCIDENT_GRAPH) + "."),
+        "incidents": [{"id": i, "name": n, "root_cause": c, "features": inc_features[i]} for i, n, c, _ in INCIDENTS],
+        "members": members,
+        "links": links,
+    }
+
+
+def write_eval_fixtures(ticket_rows):
+    (FIXTURES / "eval_questions.json").write_text(json.dumps({
+        "note": ("Question texts were written by hand before any search ran and were not changed after seeing "
+                 "results. Labels are in eval_qrels.json and come from scripts/make_fixtures.py, not from a person."),
+        "questions": [{"id": q, "text": text, "intent": intent} for q, text, intent, _ in EVAL_QUESTIONS],
+    }, indent=1) + "\n")
+    (FIXTURES / "eval_qrels.json").write_text(json.dumps(qrels(ticket_rows), indent=1, sort_keys=True) + "\n")
+    (FIXTURES / "incident_graph.json").write_text(json.dumps(incident_graph(ticket_rows), indent=1) + "\n")
+    (FIXTURES / "incoming_tickets.json").write_text(json.dumps(INCOMING_TICKETS, indent=1) + "\n")
+
+
 def write_jsonl(path, rows):
     path.write_text("".join(json.dumps(r, sort_keys=True) + "\n" for r in rows), encoding="utf-8")
 
@@ -134,10 +315,12 @@ def main():
         [{"id": i, "name": n,
           "product_id": 1 + (i - 1) % len(PRODUCTS)} for i, n in enumerate(CUSTOMERS, start=1)], indent=1) + "\n")
     write_jsonl(FIXTURES / "articles.jsonl", articles())
-    write_jsonl(FIXTURES / "tickets.jsonl", tickets(rng, 1, 500))
+    core = tickets(rng, 1, 500)
+    write_jsonl(FIXTURES / "tickets.jsonl", core)
     # Extra tickets: ids 1001-1010 for step 4, ids 2001-2030 for step 5.
     write_jsonl(FIXTURES / "tickets_late.jsonl", tickets(rng, 1001, 10))
     write_jsonl(FIXTURES / "tickets_crash.jsonl", tickets(rng, 2001, 30))
+    write_eval_fixtures(core)
     print("fixtures written")
 
 

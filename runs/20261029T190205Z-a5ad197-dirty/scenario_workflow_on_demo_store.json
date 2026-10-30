@@ -1,0 +1,1200 @@
+{
+ "elapsed_seconds": 15.264,
+ "grafx_version": "0.0.8",
+ "result": {
+  "article_after": {
+   "id": 1,
+   "revision": 2,
+   "revision_before_workflow": 1
+  },
+  "audit": {
+   "article_id": 1,
+   "changed": true,
+   "current_version_csn": 8911,
+   "diff_operations": [
+    "updated",
+    "updated"
+   ],
+   "diff_properties_changed": [
+    "body",
+    "revision"
+   ],
+   "pid": 93166,
+   "previous_version_csn": 305,
+   "revision_after": 2,
+   "revision_before": 1,
+   "sentences_added": [
+    "If this problem shows up in several products at once, check whether the incident \"Identity service outage\" is open before you reset accounts or ask the customer to reinstall."
+   ],
+   "sentences_removed": [],
+   "stage": "audit",
+   "versions": 2
+  },
+  "checks": {
+   "article_enriched_exactly_once": true,
+   "audit_found_the_change": true,
+   "audit_saw_only_that_revision_step": true,
+   "each_new_ticket_exists_once": true,
+   "four_roles_ran_as_separate_processes": true,
+   "graph_changed_a_decision": true,
+   "graph_did_not_change_every_decision": true,
+   "no_duplicate_links": true,
+   "one_triage_row_per_ticket": true,
+   "verify_clean": true
+  },
+  "decisions": {
+   "3001": {
+    "conflicts": 0,
+    "csn": 8890,
+    "graph_boost_seeds": [
+     144,
+     179,
+     135
+    ],
+    "graph_changed_decision": true,
+    "pid": 93144,
+    "similar_tickets_hybrid": [
+     {
+      "subject": "Sign in: sign in fails with an unknown error on the second device",
+      "ticket_id": 144
+     },
+     {
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 135
+     },
+     {
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 179
+     },
+     {
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 1001
+     },
+     {
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 429
+     }
+    ],
+    "similar_tickets_hybrid_with_graph_boost": [
+     {
+      "graph_distance": 0,
+      "subject": "Sign in: sign in fails with an unknown error on the second device",
+      "ticket_id": 144
+     },
+     {
+      "graph_distance": 0,
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 135
+     },
+     {
+      "graph_distance": 0,
+      "subject": "Sign in: the login page says my session expired again and again",
+      "ticket_id": 179
+     },
+     {
+      "graph_distance": 2,
+      "subject": "Sign in: sign in fails with an unknown error on the second device",
+      "ticket_id": 389
+     },
+     {
+      "graph_distance": 1,
+      "subject": "Biometric login: I cannot turn on biometric login",
+      "ticket_id": 74
+     }
+    ],
+    "skipped": false,
+    "stage": "triage",
+    "suggested_articles": [
+     1
+    ],
+    "text_and_vector_only": {
+     "decision": {
+      "action": "routine",
+      "escalate": false,
+      "incident_id": null
+     },
+     "products": [
+      "Tidewater Sync"
+     ]
+    },
+    "ticket": {
+     "subject": "Login fails on all our devices"
+    },
+    "ticket_id": 3001,
+    "with_graph": {
+     "decision": {
+      "action": "attach_to_incident",
+      "escalate": true,
+      "incident_id": 1
+     },
+     "evidence_ticket_ids": [
+      28,
+      74,
+      122,
+      134,
+      135,
+      144,
+      179,
+      182,
+      185,
+      198,
+      214,
+      252,
+      256,
+      271,
+      331,
+      336,
+      361,
+      367,
+      389,
+      406,
+      420,
+      429,
+      430,
+      468,
+      1001
+     ],
+     "incident": "Identity service outage",
+     "incident_id": 1,
+     "products": [
+      "Tidewater Sync",
+      "Marrow Billing",
+      "Cobalt Gateway",
+      "Fennel Mobile"
+     ],
+     "tickets_considered": 25
+    }
+   },
+   "3002": {
+    "conflicts": 0,
+    "csn": 8798,
+    "graph_boost_seeds": [
+     94,
+     50,
+     464
+    ],
+    "graph_changed_decision": false,
+    "pid": 93145,
+    "similar_tickets_hybrid": [
+     {
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 50
+     },
+     {
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 94
+     },
+     {
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 318
+     },
+     {
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 443
+     },
+     {
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 103
+     }
+    ],
+    "similar_tickets_hybrid_with_graph_boost": [
+     {
+      "graph_distance": 0,
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 50
+     },
+     {
+      "graph_distance": 0,
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 94
+     },
+     {
+      "graph_distance": 0,
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 464
+     },
+     {
+      "graph_distance": null,
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 318
+     },
+     {
+      "graph_distance": null,
+      "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+      "ticket_id": 443
+     }
+    ],
+    "skipped": false,
+    "stage": "triage",
+    "suggested_articles": [
+     18
+    ],
+    "text_and_vector_only": {
+     "decision": {
+      "action": "routine",
+      "escalate": false,
+      "incident_id": null
+     },
+     "products": [
+      "Lantern Reports"
+     ]
+    },
+    "ticket": {
+     "subject": "Report layout question"
+    },
+    "ticket_id": 3002,
+    "with_graph": {
+     "decision": {
+      "action": "routine",
+      "escalate": false,
+      "incident_id": null
+     },
+     "evidence_ticket_ids": [
+      50,
+      94,
+      318,
+      443,
+      103
+     ],
+     "incident": null,
+     "incident_id": null,
+     "products": [
+      "Lantern Reports"
+     ],
+     "tickets_considered": 5
+    }
+   }
+  },
+  "diagnostics": {
+   "3001": {
+    "misfiled_links_touching_evidence": [
+     {
+      "a": 205,
+      "b": 406,
+      "product_of_a": 1,
+      "product_of_b": 4
+     },
+     {
+      "a": 412,
+      "b": 252,
+      "product_of_a": 1,
+      "product_of_b": 5
+     },
+     {
+      "a": 256,
+      "b": 429,
+      "product_of_a": 2,
+      "product_of_b": 1
+     }
+    ]
+   },
+   "3002": {
+    "misfiled_links_touching_evidence": []
+   }
+  },
+  "faults_injected": true,
+  "joins_incident_rows": 1,
+  "ok": true,
+  "passes": [
+   {
+    "article_id": 1,
+    "injected_fault": "before_commit",
+    "interrupted": true,
+    "pass": 1,
+    "stages": {
+     "intake": [
+      {
+       "result": {
+        "conflicts": 1,
+        "csn": 8773,
+        "customer_id": 6,
+        "pid": 93142,
+        "product_from_account": {
+         "id": 1,
+         "name": "Tidewater Sync"
+        },
+        "skipped": false,
+        "stage": "intake",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "conflicts": 0,
+        "csn": 8720,
+        "customer_id": 12,
+        "pid": 93143,
+        "product_from_account": {
+         "id": 2,
+         "name": "Marrow Billing"
+        },
+        "skipped": false,
+        "stage": "intake",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "maintain": [
+      {
+       "result": null,
+       "returncode": -9
+      },
+      {
+       "result": {
+        "pid": 93148,
+        "reason": "triage did not join an incident",
+        "skipped": true,
+        "stage": "maintain",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "triage": [
+      {
+       "result": {
+        "conflicts": 0,
+        "csn": 8890,
+        "graph_boost_seeds": [
+         144,
+         179,
+         135
+        ],
+        "graph_changed_decision": true,
+        "pid": 93144,
+        "similar_tickets_hybrid": [
+         {
+          "subject": "Sign in: sign in fails with an unknown error on the second device",
+          "ticket_id": 144
+         },
+         {
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 135
+         },
+         {
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 179
+         },
+         {
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 1001
+         },
+         {
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 429
+         }
+        ],
+        "similar_tickets_hybrid_with_graph_boost": [
+         {
+          "graph_distance": 0,
+          "subject": "Sign in: sign in fails with an unknown error on the second device",
+          "ticket_id": 144
+         },
+         {
+          "graph_distance": 0,
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 135
+         },
+         {
+          "graph_distance": 0,
+          "subject": "Sign in: the login page says my session expired again and again",
+          "ticket_id": 179
+         },
+         {
+          "graph_distance": 2,
+          "subject": "Sign in: sign in fails with an unknown error on the second device",
+          "ticket_id": 389
+         },
+         {
+          "graph_distance": 1,
+          "subject": "Biometric login: I cannot turn on biometric login",
+          "ticket_id": 74
+         }
+        ],
+        "skipped": false,
+        "stage": "triage",
+        "suggested_articles": [
+         1
+        ],
+        "text_and_vector_only": {
+         "decision": {
+          "action": "routine",
+          "escalate": false,
+          "incident_id": null
+         },
+         "products": [
+          "Tidewater Sync"
+         ]
+        },
+        "ticket": {
+         "subject": "Login fails on all our devices"
+        },
+        "ticket_id": 3001,
+        "with_graph": {
+         "decision": {
+          "action": "attach_to_incident",
+          "escalate": true,
+          "incident_id": 1
+         },
+         "evidence_ticket_ids": [
+          28,
+          74,
+          122,
+          134,
+          135,
+          144,
+          179,
+          182,
+          185,
+          198,
+          214,
+          252,
+          256,
+          271,
+          331,
+          336,
+          361,
+          367,
+          389,
+          406,
+          420,
+          429,
+          430,
+          468,
+          1001
+         ],
+         "incident": "Identity service outage",
+         "incident_id": 1,
+         "products": [
+          "Tidewater Sync",
+          "Marrow Billing",
+          "Cobalt Gateway",
+          "Fennel Mobile"
+         ],
+         "tickets_considered": 25
+        }
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "conflicts": 0,
+        "csn": 8798,
+        "graph_boost_seeds": [
+         94,
+         50,
+         464
+        ],
+        "graph_changed_decision": false,
+        "pid": 93145,
+        "similar_tickets_hybrid": [
+         {
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 50
+         },
+         {
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 94
+         },
+         {
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 318
+         },
+         {
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 443
+         },
+         {
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 103
+         }
+        ],
+        "similar_tickets_hybrid_with_graph_boost": [
+         {
+          "graph_distance": 0,
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 50
+         },
+         {
+          "graph_distance": 0,
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 94
+         },
+         {
+          "graph_distance": 0,
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 464
+         },
+         {
+          "graph_distance": null,
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 318
+         },
+         {
+          "graph_distance": null,
+          "subject": "Scheduled report: the weekly report arrives twice with different numbers",
+          "ticket_id": 443
+         }
+        ],
+        "skipped": false,
+        "stage": "triage",
+        "suggested_articles": [
+         18
+        ],
+        "text_and_vector_only": {
+         "decision": {
+          "action": "routine",
+          "escalate": false,
+          "incident_id": null
+         },
+         "products": [
+          "Lantern Reports"
+         ]
+        },
+        "ticket": {
+         "subject": "Report layout question"
+        },
+        "ticket_id": 3002,
+        "with_graph": {
+         "decision": {
+          "action": "routine",
+          "escalate": false,
+          "incident_id": null
+         },
+         "evidence_ticket_ids": [
+          50,
+          94,
+          318,
+          443,
+          103
+         ],
+         "incident": null,
+         "incident_id": null,
+         "products": [
+          "Lantern Reports"
+         ],
+         "tickets_considered": 5
+        }
+       },
+       "returncode": 0
+      }
+     ]
+    },
+    "state_after": {
+     "about_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "article": {
+      "body_chars": 209,
+      "id": 1,
+      "revision": 1
+     },
+     "new_tickets": {
+      "3001": 1,
+      "3002": 1
+     },
+     "opened_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "triage_rows": 2,
+     "verify_findings": 0,
+     "workflow_checkpoints": [
+      "intake-3001",
+      "intake-3002",
+      "triage-3001",
+      "triage-3002"
+     ]
+    }
+   },
+   {
+    "article_id": 1,
+    "injected_fault": "after_commit",
+    "interrupted": true,
+    "pass": 2,
+    "stages": {
+     "intake": [
+      {
+       "result": {
+        "pid": 93151,
+        "skipped": true,
+        "stage": "intake",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "pid": 93152,
+        "skipped": true,
+        "stage": "intake",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "maintain": [
+      {
+       "result": null,
+       "returncode": -9
+      },
+      {
+       "result": {
+        "pid": 93156,
+        "reason": "triage did not join an incident",
+        "skipped": true,
+        "stage": "maintain",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "triage": [
+      {
+       "result": {
+        "pid": 93153,
+        "skipped": true,
+        "stage": "triage",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "pid": 93154,
+        "skipped": true,
+        "stage": "triage",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ]
+    },
+    "state_after": {
+     "about_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "article": {
+      "body_chars": 384,
+      "id": 1,
+      "revision": 2
+     },
+     "new_tickets": {
+      "3001": 1,
+      "3002": 1
+     },
+     "opened_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "triage_rows": 2,
+     "verify_findings": 0,
+     "workflow_checkpoints": [
+      "intake-3001",
+      "intake-3002",
+      "maintain-1-3001",
+      "triage-3001",
+      "triage-3002"
+     ]
+    }
+   },
+   {
+    "article_id": 1,
+    "injected_fault": null,
+    "interrupted": false,
+    "pass": 3,
+    "stages": {
+     "audit": [
+      {
+       "result": {
+        "article_id": 1,
+        "changed": true,
+        "current_version_csn": 8911,
+        "diff_operations": [
+         "updated",
+         "updated"
+        ],
+        "diff_properties_changed": [
+         "body",
+         "revision"
+        ],
+        "pid": 93166,
+        "previous_version_csn": 305,
+        "revision_after": 2,
+        "revision_before": 1,
+        "sentences_added": [
+         "If this problem shows up in several products at once, check whether the incident \"Identity service outage\" is open before you reset accounts or ask the customer to reinstall."
+        ],
+        "sentences_removed": [],
+        "stage": "audit",
+        "versions": 2
+       },
+       "returncode": 0
+      }
+     ],
+     "intake": [
+      {
+       "result": {
+        "pid": 93157,
+        "skipped": true,
+        "stage": "intake",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "pid": 93158,
+        "skipped": true,
+        "stage": "intake",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "maintain": [
+      {
+       "result": {
+        "article_id": 1,
+        "pid": 93161,
+        "skipped": true,
+        "stage": "maintain",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "pid": 93162,
+        "reason": "triage did not join an incident",
+        "skipped": true,
+        "stage": "maintain",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ],
+     "triage": [
+      {
+       "result": {
+        "pid": 93159,
+        "skipped": true,
+        "stage": "triage",
+        "ticket_id": 3001
+       },
+       "returncode": 0
+      },
+      {
+       "result": {
+        "pid": 93160,
+        "skipped": true,
+        "stage": "triage",
+        "ticket_id": 3002
+       },
+       "returncode": 0
+      }
+     ]
+    },
+    "state_after": {
+     "about_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "article": {
+      "body_chars": 384,
+      "id": 1,
+      "revision": 2
+     },
+     "new_tickets": {
+      "3001": 1,
+      "3002": 1
+     },
+     "opened_links": {
+      "3001": 1,
+      "3002": 1
+     },
+     "triage_rows": 2,
+     "verify_findings": 0,
+     "workflow_checkpoints": [
+      "intake-3001",
+      "intake-3002",
+      "maintain-1-3001",
+      "triage-3001",
+      "triage-3002"
+     ]
+    }
+   }
+  ],
+  "processes_by_role": {
+   "audit": 1,
+   "intake": 6,
+   "maintain": 6,
+   "triage": 6
+  },
+  "store": {
+   "app_tables_created": [
+    "Incident",
+    "Checkpoint",
+    "Triage",
+    "InIncident",
+    "SameIncident",
+    "TriageOf",
+    "Suggests",
+    "JoinsIncident"
+   ],
+   "existing_store": true,
+   "incident_graph": {
+    "incidents": 4,
+    "links": 168,
+    "loaded": true,
+    "members": 83
+   },
+   "text_index_created": false,
+   "tickets_before": 530
+  },
+  "trace": [
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "intake"
+   },
+   {
+    "actor": "intake-3002",
+    "conflicts": 0,
+    "csn": 8720,
+    "event": "committed",
+    "pid": 93143,
+    "stage": "intake",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "intake-3001",
+    "conflicts": 1,
+    "csn": 8773,
+    "event": "committed",
+    "pid": 93142,
+    "stage": "intake",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "intake"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "triage"
+   },
+   {
+    "actor": "triage-3002",
+    "csn": 8798,
+    "decision": "routine",
+    "escalate": false,
+    "event": "committed",
+    "pid": 93145,
+    "stage": "triage",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "triage-3001",
+    "csn": 8890,
+    "decision": "attach_to_incident",
+    "escalate": true,
+    "event": "committed",
+    "pid": 93144,
+    "stage": "triage",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "triage"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3002",
+    "event": "nothing_to_do",
+    "pid": 93148,
+    "stage": "maintain",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "maintain-3001",
+    "article_id": 1,
+    "event": "in_transaction",
+    "pid": 93147,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3001",
+    "event": "sigkill_self",
+    "pid": 93147,
+    "point": "before_commit",
+    "unit": "maintain-1"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     -9,
+     0
+    ],
+    "stage": "maintain"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "intake"
+   },
+   {
+    "actor": "intake-3002",
+    "event": "skipped",
+    "pid": 93152,
+    "stage": "intake",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "intake-3001",
+    "event": "skipped",
+    "pid": 93151,
+    "stage": "intake",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "intake"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "triage"
+   },
+   {
+    "actor": "triage-3001",
+    "event": "skipped",
+    "pid": 93153,
+    "stage": "triage",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "triage-3002",
+    "event": "skipped",
+    "pid": 93154,
+    "stage": "triage",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "triage"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3002",
+    "event": "nothing_to_do",
+    "pid": 93156,
+    "stage": "maintain",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "maintain-3001",
+    "article_id": 1,
+    "event": "in_transaction",
+    "pid": 93155,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3001",
+    "article_id": 1,
+    "csn": 8911,
+    "event": "committed",
+    "pid": 93155,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3001",
+    "event": "sigkill_self",
+    "pid": 93155,
+    "point": "after_commit",
+    "unit": "maintain-1"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     -9,
+     0
+    ],
+    "stage": "maintain"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "intake"
+   },
+   {
+    "actor": "intake-3001",
+    "event": "skipped",
+    "pid": 93157,
+    "stage": "intake",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "intake-3002",
+    "event": "skipped",
+    "pid": 93158,
+    "stage": "intake",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "intake"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "triage"
+   },
+   {
+    "actor": "triage-3002",
+    "event": "skipped",
+    "pid": 93160,
+    "stage": "triage",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "triage-3001",
+    "event": "skipped",
+    "pid": 93159,
+    "stage": "triage",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "triage"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 2,
+    "stage": "maintain"
+   },
+   {
+    "actor": "maintain-3001",
+    "article_id": 1,
+    "event": "skipped",
+    "pid": 93161,
+    "stage": "maintain",
+    "ticket_id": 3001
+   },
+   {
+    "actor": "maintain-3002",
+    "event": "nothing_to_do",
+    "pid": 93162,
+    "stage": "maintain",
+    "ticket_id": 3002
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0,
+     0
+    ],
+    "stage": "maintain"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_start",
+    "pid": 93141,
+    "processes": 1,
+    "stage": "audit"
+   },
+   {
+    "actor": "audit",
+    "article_id": 1,
+    "changed": true,
+    "event": "audited",
+    "pid": 93166,
+    "stage": "audit"
+   },
+   {
+    "actor": "orchestrator",
+    "event": "stage_end",
+    "pid": 93141,
+    "returncodes": [
+     0
+    ],
+    "stage": "audit"
+   }
+  ]
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "scenario": "workflow"
+}

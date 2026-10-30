@@ -1,0 +1,1011 @@
+{
+ "labeler": "claude-sonnet-5-5 (omp subagent), model-labelled, not human",
+ "labeled_at": "2026-10-30T06:35:14Z",
+ "method": "Verified eval_qrels.json equals the rule in scripts/make_fixtures.py (tickets with article_id in the target feature(s)). Parsed every ticket into its two symptom sentences (every one matches a symptom of its feature in FEATURES). For each question I decided by hand, from question text vs symptom text, which symptoms of which features answer it (strong), which only relate (weak), and which do not. A listed ticket is proposed for removal only when neither of its two symptoms is strong or weak. Candidates for 'add' came from tickets of features not in the key whose symptom is strong, plus a word-overlap scan of all 36 questions against all non-key symptoms. Articles were judged at feature level: each article text states one symptom and generic steps. Draft, model labels, spot-check by a person needed. Reviewed with a different model than the one that produced the data, same vendor family.",
+ "f01": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "18 strong, 3 weak, 0 no-match of 21 listed. "
+ },
+ "f02": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "14 strong, 0 weak, 0 no-match of 14 listed. Question says 'folder upload'; ticket text is 'sync stalls at 99 percent'. Match is by meaning (stall near the end of a folder sync), not wording. photo upload s0 'stops halfway' judged different (photos, halfway). Moderate confidence."
+ },
+ "f03": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "14 strong, 0 weak, 0 no-match of 14 listed. "
+ },
+ "f04": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "12 strong, 0 weak, 0 no-match of 12 listed. "
+ },
+ "f05": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "10 strong, 6 weak, 0 no-match of 16 listed. "
+ },
+ "f06": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 11,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'csv download of invoices comes out blank'"
+   },
+   {
+    "id": 58,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'csv download of invoices comes out blank'"
+   }
+  ],
+  "add": [],
+  "note": "7 strong, 5 weak, 2 no-match of 14 listed. 'Blank' matches only the 'empty file' symptom; 'missing the tax column' counted weak, 'times out' removed."
+ },
+ "f07": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "9 strong, 0 weak, 0 no-match of 9 listed. "
+ },
+ "f08": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "10 strong, 4 weak, 0 no-match of 14 listed. "
+ },
+ "f09": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "10 strong, 0 weak, 0 no-match of 10 listed. "
+ },
+ "f10": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "14 strong, 2 weak, 0 no-match of 16 listed. "
+ },
+ "f11": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 19,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'api credential rejected as invalid'"
+   },
+   {
+    "id": 20,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'the api key list does not show last used time') do not match question 'api credential rejected as invalid'"
+   },
+   {
+    "id": 182,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'api credential rejected as invalid'"
+   },
+   {
+    "id": 198,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'api credential rejected as invalid'"
+   },
+   {
+    "id": 214,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'api credential rejected as invalid'"
+   },
+   {
+    "id": 361,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'api credential rejected as invalid'"
+   }
+  ],
+  "add": [],
+  "note": "8 strong, 0 weak, 6 no-match of 14 listed. Only the 'new api key is rejected as invalid' symptom matches; rotate/last-used tickets removed."
+ },
+ "f12": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 322,
+    "reason": "webhook retry ticket whose symptoms ('the same webhook is delivered five times' / 'the same webhook is delivered five times') do not match question 'events are not redelivered after a failure'"
+   }
+  ],
+  "add": [],
+  "note": "8 strong, 7 weak, 1 no-match of 16 listed. Only 'failed webhooks are not retried' is strong; 'cannot replay' weak; 'delivered five times' is the opposite problem and was removed."
+ },
+ "f13": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "5 strong, 0 weak, 0 no-match of 5 listed. "
+ },
+ "f14": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "7 strong, 4 weak, 0 no-match of 11 listed. "
+ },
+ "f15": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "7 strong, 2 weak, 0 no-match of 9 listed. "
+ },
+ "f16": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "7 strong, 5 weak, 0 no-match of 12 listed. "
+ },
+ "f17": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "8 strong, 1 weak, 0 no-match of 9 listed. "
+ },
+ "f18": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 334,
+    "reason": "app crash ticket whose symptoms ('the app crashes on a tablet in landscape' / 'the app crashes on a tablet in landscape') do not match question 'app closes immediately when opening settings'"
+   },
+   {
+    "id": 343,
+    "reason": "app crash ticket whose symptoms ('the app crashes on a tablet in landscape' / 'the app crashes on a tablet in landscape') do not match question 'app closes immediately when opening settings'"
+   },
+   {
+    "id": 423,
+    "reason": "app crash ticket whose symptoms ('the app crashes on a tablet in landscape' / 'the app crashes on a tablet in landscape') do not match question 'app closes immediately when opening settings'"
+   }
+  ],
+  "add": [],
+  "note": "7 strong, 1 weak, 3 no-match of 11 listed. Strong: crashes on opening settings; splash-screen close weak; tablet-landscape crash removed."
+ },
+ "f19": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "10 strong, 0 weak, 0 no-match of 10 listed. "
+ },
+ "f20": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 215,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 217,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 287,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 351,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 383,
+    "reason": "currency ticket whose symptoms ('exchange rates look a day old on foreign invoices' / 'I cannot switch an existing customer to euros') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 411,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 477,
+    "reason": "currency ticket whose symptoms ('exchange rates look a day old on foreign invoices' / 'I cannot switch an existing customer to euros') do not match question 'currency symbol on invoice is wrong'"
+   },
+   {
+    "id": 484,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'currency symbol on invoice is wrong'"
+   }
+  ],
+  "add": [],
+  "note": "11 strong, 0 weak, 8 no-match of 19 listed. Only 'wrong currency symbol' is strong; exchange-rate and switch-to-euros tickets removed."
+ },
+ "f21": {
+  "ok": true,
+  "remove": [],
+  "add": [],
+  "note": "11 strong, 1 weak, 0 no-match of 12 listed. "
+ },
+ "f22": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 193,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'reminder emails sent after payment'"
+   },
+   {
+    "id": 199,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'reminder emails sent after payment'"
+   },
+   {
+    "id": 254,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'reminder emails sent after payment'"
+   },
+   {
+    "id": 285,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'reminder emails sent after payment'"
+   },
+   {
+    "id": 415,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'reminder emails sent after payment'"
+   }
+  ],
+  "add": [],
+  "note": "9 strong, 3 weak, 5 no-match of 17 listed. Strong: 'reminder emails go out after paid'; 'turn off reminders' weak; wrong-company-name removed."
+ },
+ "f23": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 86,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'storage full warning but plenty of space left'"
+   },
+   {
+    "id": 301,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'storage full warning but plenty of space left'"
+   },
+   {
+    "id": 358,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'storage full warning but plenty of space left'"
+   }
+  ],
+  "add": [],
+  "note": "12 strong, 0 weak, 3 no-match of 15 listed. Strong: storage full / quota bar not updating; 'charged for extra storage' removed."
+ },
+ "f24": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 245,
+    "reason": "photo upload ticket whose symptoms ('uploaded photos appear rotated' / 'uploaded photos appear rotated') do not match question 'photos stop uploading on cellular'"
+   }
+  ],
+  "add": [],
+  "note": "4 strong, 6 weak, 1 no-match of 11 listed. Strong: stops halfway on mobile data; 'rotated photos' removed; 'queue stuck' weak."
+ },
+ "i01": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 19,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 20,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'the api key list does not show last used time') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 74,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 182,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 198,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 214,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 277,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'users cannot authenticate since this morning'"
+   },
+   {
+    "id": 361,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'users cannot authenticate since this morning'"
+   }
+  ],
+  "add": [],
+  "note": "27 strong, 3 weak, 8 no-match of 38 listed. Question is about authentication failing. sign in all strong; api key only 'rejected as invalid'; biometric 'face unlock stopped' strong, fingerprint weak. api key rotate/last-used and 'cannot turn on biometric' removed. Whether biometric/api-key symptoms came from a shared outage is not visible in the text (only the script says so)."
+ },
+ "i02": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 19,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 20,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'the api key list does not show last used time') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 74,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 182,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 198,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 214,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 277,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'login keeps failing and sessions expire'"
+   },
+   {
+    "id": 361,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'login keeps failing and sessions expire'"
+   }
+  ],
+  "add": [],
+  "note": "12 strong, 18 weak, 8 no-match of 38 listed. Sign in all strong. api key and biometric tickets are only loosely related to 'login keeps failing and sessions expire' (graded weak); most weak items are kept. Low confidence on the weak tickets."
+ },
+ "i03": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 4,
+    "reason": "biometric login ticket whose symptoms ('the fingerprint prompt appears and then closes' / 'I cannot turn on biometric login') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 19,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 20,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'the api key list does not show last used time') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 74,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 182,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 198,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 214,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 277,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'I cannot turn on biometric login') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 319,
+    "reason": "biometric login ticket whose symptoms ('the fingerprint prompt appears and then closes' / 'the fingerprint prompt appears and then closes') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 361,
+    "reason": "api key ticket whose symptoms ('I cannot rotate an api key without downtime' / 'I cannot rotate an api key without downtime') do not match question 'credentials rejected across our apps'"
+   },
+   {
+    "id": 490,
+    "reason": "biometric login ticket whose symptoms ('I cannot turn on biometric login' / 'the fingerprint prompt appears and then closes') do not match question 'credentials rejected across our apps'"
+   }
+  ],
+  "add": [],
+  "note": "19 strong, 8 weak, 11 no-match of 38 listed. 'Credentials rejected across our apps': api key s0 and sign in s0/s2 strong; sign-in session-expired and biometric weak. Several api key and biometric tickets removed."
+ },
+ "i04": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 75,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 87,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 97,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 129,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 193,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 199,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 200,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 201,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 254,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 285,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 314,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 413,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'I want to turn off reminder emails for one customer') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 414,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'I get no alert when the metric drops to zero') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 415,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 428,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 473,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   },
+   {
+    "id": 497,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'transactional emails are not being delivered'"
+   }
+  ],
+  "add": [
+   {
+    "id": 13,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 21,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 102,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 107,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 128,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 159,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 283,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 311,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 353,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   },
+   {
+    "id": 496,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'transactional emails are not being delivered'; its feature is not in the key for this question"
+   }
+  ],
+  "note": "18 strong, 17 weak, 17 no-match of 52 listed. Key lists password reset, dunning, alert rule. Only password reset tickets are about delivery failure. Dunning/alert tickets mostly are not. 'refund email never reached the customer' tickets (refund feature) are clearly a not-delivered transactional email and are missing from the key (add). Lower confidence: whether weak dunning/alert tickets belong."
+ },
+ "i05": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 75,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 87,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 97,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 129,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 193,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 199,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 200,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 201,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 254,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 285,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 314,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 413,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'I want to turn off reminder emails for one customer') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 414,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'I get no alert when the metric drops to zero') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 415,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 428,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 473,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   },
+   {
+    "id": 497,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'email sent late or never arrives'"
+   }
+  ],
+  "add": [
+   {
+    "id": 13,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 21,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 102,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 107,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 128,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 159,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 283,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 311,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 353,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   },
+   {
+    "id": 496,
+    "reason": "refund ticket states 'the refund email never reached the customer', which matches question 'email sent late or never arrives'; its feature is not in the key for this question"
+   }
+  ],
+  "note": "23 strong, 12 weak, 17 no-match of 52 listed. Strong: password reset not arriving, alert emails an hour late; refund email never reached the customer is missing from the key (add)."
+ },
+ "i06": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 75,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 87,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 95,
+    "reason": "password reset ticket whose symptoms ('the reset link in the email says it has expired' / 'the reset link in the email says it has expired') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 97,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 129,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 193,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 199,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 200,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 201,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 205,
+    "reason": "password reset ticket whose symptoms ('the reset link in the email says it has expired' / 'the reset link in the email says it has expired') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 254,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 285,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 314,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 371,
+    "reason": "password reset ticket whose symptoms ('the reset link in the email says it has expired' / 'the reset link in the email says it has expired') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 413,
+    "reason": "dunning email ticket whose symptoms ('I want to turn off reminder emails for one customer' / 'I want to turn off reminder emails for one customer') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 414,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'I get no alert when the metric drops to zero') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 415,
+    "reason": "dunning email ticket whose symptoms ('the overdue reminder uses the wrong company name' / 'the overdue reminder uses the wrong company name') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 428,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'I get no alert when the metric drops to zero') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 473,
+    "reason": "alert rule ticket whose symptoms ('I get no alert when the metric drops to zero' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   },
+   {
+    "id": 497,
+    "reason": "alert rule ticket whose symptoms ('the alert rule fires even when the value is normal' / 'the alert rule fires even when the value is normal') do not match question 'notification emails delayed by an hour'"
+   }
+  ],
+  "add": [],
+  "note": "5 strong, 27 weak, 20 no-match of 52 listed. Only 'alert emails arrive an hour late' tickets are strong (5); 27 weak, mostly password-reset 'not arriving'. The key is mostly loose for this question; low confidence."
+ },
+ "i07": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 49,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 57,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 63,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the quota bar does not update after I delete files') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 82,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 86,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 113,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the quota bar does not update after I delete files') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 216,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 230,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 235,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 245,
+    "reason": "photo upload ticket whose symptoms ('uploaded photos appear rotated' / 'uploaded photos appear rotated') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 301,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 337,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 341,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 358,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 394,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the quota bar does not update after I delete files') do not match question 'uploads and syncing hang at the end'"
+   },
+   {
+    "id": 494,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the app says my storage is full but I used half') do not match question 'uploads and syncing hang at the end'"
+   }
+  ],
+  "add": [],
+  "note": "18 strong, 6 weak, 16 no-match of 40 listed. Sync stall tickets strong; photo 'stops halfway' counted strong, queue stuck weak. Storage quota tickets are in the no-match list: none of the quota symptoms is about uploads hanging."
+ },
+ "i08": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 245,
+    "reason": "photo upload ticket whose symptoms ('uploaded photos appear rotated' / 'uploaded photos appear rotated') do not match question 'storage usage numbers look wrong and transfers stall'"
+   }
+  ],
+  "add": [],
+  "note": "26 strong, 13 weak, 1 no-match of 40 listed. Quota numbers and sync stall strong; photo upload weak. Mostly fine."
+ },
+ "i09": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 49,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 57,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 63,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the quota bar does not update after I delete files') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 82,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 86,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 113,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the quota bar does not update after I delete files') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 216,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 230,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 235,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 245,
+    "reason": "photo upload ticket whose symptoms ('uploaded photos appear rotated' / 'uploaded photos appear rotated') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 301,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 337,
+    "reason": "storage quota ticket whose symptoms ('the quota bar does not update after I delete files' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 341,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 358,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'I was charged for extra storage I did not add') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 394,
+    "reason": "storage quota ticket whose symptoms ('I was charged for extra storage I did not add' / 'the quota bar does not update after I delete files') do not match question 'files stop uploading halfway'"
+   },
+   {
+    "id": 494,
+    "reason": "storage quota ticket whose symptoms ('the app says my storage is full but I used half' / 'the app says my storage is full but I used half') do not match question 'files stop uploading halfway'"
+   }
+  ],
+  "add": [],
+  "note": "4 strong, 20 weak, 16 no-match of 40 listed. Only photo 'stops halfway' tickets are strong (4); sync stall at 99 percent weak; quota tickets (16) removed."
+ },
+ "i10": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 11,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 48,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 58,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 66,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'export csv gives an empty file for last month') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 96,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'exporting invoices to csv times out on large accounts') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 108,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 162,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 190,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'exporting invoices to csv times out on large accounts') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 217,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 287,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoices show wrong amounts'"
+   },
+   {
+    "id": 411,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoices show wrong amounts'"
+   }
+  ],
+  "add": [],
+  "note": "24 strong, 12 weak, 11 no-match of 47 listed. 'Wrong amounts': tax strong, exchange-rate symptom strong, currency symbol weak, export missing tax column weak. Export empty-file/timeouts removed."
+ },
+ "i11": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 11,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 48,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 58,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 66,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'export csv gives an empty file for last month') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 96,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'exporting invoices to csv times out on large accounts') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 108,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 162,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'export csv gives an empty file for last month') do not match question 'incorrect tax and currency values on invoices'"
+   },
+   {
+    "id": 190,
+    "reason": "invoice export ticket whose symptoms ('export csv gives an empty file for last month' / 'exporting invoices to csv times out on large accounts') do not match question 'incorrect tax and currency values on invoices'"
+   }
+  ],
+  "add": [],
+  "note": "30 strong, 9 weak, 8 no-match of 47 listed. Tax and currency strong; export only 'missing the tax column' weak; others removed."
+ },
+ "i12": {
+  "ok": false,
+  "remove": [
+   {
+    "id": 11,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 58,
+    "reason": "invoice export ticket whose symptoms ('exporting invoices to csv times out on large accounts' / 'exporting invoices to csv times out on large accounts') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 215,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 217,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 287,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 351,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 383,
+    "reason": "currency ticket whose symptoms ('exchange rates look a day old on foreign invoices' / 'I cannot switch an existing customer to euros') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 411,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'I cannot switch an existing customer to euros') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 477,
+    "reason": "currency ticket whose symptoms ('exchange rates look a day old on foreign invoices' / 'I cannot switch an existing customer to euros') do not match question 'invoice numbers and columns are off'"
+   },
+   {
+    "id": 484,
+    "reason": "currency ticket whose symptoms ('I cannot switch an existing customer to euros' / 'exchange rates look a day old on foreign invoices') do not match question 'invoice numbers and columns are off'"
+   }
+  ],
+  "add": [],
+  "note": "6 strong, 31 weak, 10 no-match of 47 listed. Ambiguous: 'invoice numbers' could mean numbering or amounts. Only 'export missing tax column' counted strong. 'credit note number skips a value' (credit note feature, not in the incident) also matches 'numbers are off' but was not added since it is not clear. Low confidence."
+ }
+}

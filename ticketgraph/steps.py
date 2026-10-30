@@ -15,7 +15,7 @@ from okto_grafx import connect
 from okto_grafx.backup import create_backup, restore_backup
 from okto_grafx.transfer import export_graph, import_graph
 
-from . import auditor, searcher
+from . import auditor, digest, restore_check, searcher
 from .common import FIXTURES, ROOT, load_questions, read_jsonl, to_plain
 from .importer import link_related
 from .schema import create_store
@@ -295,9 +295,14 @@ def step9(ctx):
         if p.exists():
             raise RuntimeError(f"{p} already exists. Use a new --workdir.")
     result = {"platform": sys.platform}
+    digests = {}
+    history = {}
     with connect(ctx.store) as db:
         original = searcher.counts(db)
         original_uuid = to_plain(db.identity.database_uuid)
+        # Content and history of the original, taken before anything is copied.
+        digests["original"] = digest.content_digest(db)
+        history["original"] = restore_check.history_fingerprint(db)
         try:
             backup = create_backup(db, ctx.backup)
         except GrafxError as error:
@@ -324,6 +329,8 @@ def step9(ctx):
             restored_findings = db.verify("all").findings
             restored_counts = searcher.counts(db)
             same_uuid = to_plain(db.identity.database_uuid) == original_uuid
+            digests["restored"] = digest.content_digest(db)
+            history["restored"] = restore_check.history_fingerprint(db)
         result.update({
             "physical_backup": {"supported": True},
             "backup_files": backup.files,
@@ -343,11 +350,15 @@ def step9(ctx):
     except GrafxError as error:
         result["logical_transfer"] = {"supported": False, "error_type": type(error).__name__,
                                       "message": str(error).split(" [code=")[0]}
+        result["integrity"] = integrity_summary(digests, history, result)
+        result["digests"] = {k: v["tables"] for k, v in digests.items()}
         return result
     with connect(ctx.fork) as db:
         fork_counts = searcher.counts(db)
         fork_findings = db.verify("all").findings
         fork_uuid = to_plain(db.identity.database_uuid)
+        digests["fork"] = digest.content_digest(db)
+        history["fork"] = restore_check.history_fingerprint(db)
     result.update({
         "logical_transfer": {"supported": True},
         "logical_package_bytes": dir_bytes(ctx.package),
@@ -358,7 +369,38 @@ def step9(ctx):
         "fork_verify_findings": len(fork_findings),
         "fork_new_uuid": fork_uuid != original_uuid,
     })
+    result["integrity"] = integrity_summary(digests, history, result)
+    result["digests"] = {k: v["tables"] for k, v in digests.items()}
     return result
+
+
+def integrity_summary(digests, history, result):
+    """Content digests, history and identity, original against restored and against the logical import."""
+    out = {"digest_scope": "every property of every node and the endpoints of every relationship, all 10 tables; "
+                           "native record ids and history timestamps are not part of it",
+           "content_digest_original": digests["original"]["overall"],
+           "tables_compared": len(digests["original"]["tables"]),
+           "rows_hashed": sum(t["rows"] for t in digests["original"]["tables"].values()),
+           "history_original": restore_check.summarise(history["original"])}
+    if "restored" in digests:
+        out.update({
+            "content_digest_restored": digests["restored"]["overall"],
+            "restored_digest_matches": digests["restored"]["overall"] == digests["original"]["overall"],
+            "restored_differing_tables": digest.differing_tables(digests["original"], digests["restored"]),
+            "history_restored": restore_check.summarise(history["restored"]),
+            "history_survives_physical_restore": restore_check.history_preserved(history["original"], history["restored"]),
+            "physical_restore_keeps_database_identity": result["restored_same_uuid"],
+        })
+    if "fork" in digests:
+        out.update({
+            "content_digest_fork": digests["fork"]["overall"],
+            "fork_digest_matches": digests["fork"]["overall"] == digests["original"]["overall"],
+            "fork_differing_tables": digest.differing_tables(digests["original"], digests["fork"]),
+            "history_fork": restore_check.summarise(history["fork"]),
+            "history_survives_logical_import": restore_check.history_preserved(history["original"], history["fork"]),
+            "logical_import_gets_new_database_identity": result["fork_new_uuid"],
+        })
+    return out
 
 
 # ---------------------------------------------------------------- step 10

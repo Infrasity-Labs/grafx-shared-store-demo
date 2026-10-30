@@ -1,0 +1,177 @@
+{
+ "elapsed_seconds": 13.336,
+ "grafx_version": "0.0.8",
+ "result": {
+  "batch_latency_ms": {
+   "count": 157,
+   "max": 1870.944,
+   "mean": 116.516,
+   "min": 23.452,
+   "p50": 69.552,
+   "p95": 495.17,
+   "p99": 1300.24
+  },
+  "commit_latency_ms": {
+   "count": 157,
+   "max": 544.577,
+   "mean": 71.216,
+   "min": 23.427,
+   "p50": 66.6,
+   "p95": 114.322,
+   "p99": 390.086
+  },
+  "config": {
+   "batch_size": 10,
+   "contention": "shared",
+   "description": "High contention: 4 writers and 1 reader, all read-modify-writing the same 2 shared hot rows in every batch. Expect many write conflicts, retries with backoff, higher batch latency than commit latency, and possibly exhausted retry budgets; committed work must still be exactly accounted for.",
+   "hot_records": 2,
+   "links_per_record": 2,
+   "max_attempts": 12,
+   "name": "shared-hot-small",
+   "readers": 1,
+   "records_per_writer": 400,
+   "seed": 1,
+   "writers": 4
+  },
+  "conflict_attempt_latency_ms": {
+   "count": 76,
+   "max": 105.84,
+   "mean": 54.072,
+   "min": 18.043,
+   "p50": 56.355,
+   "p95": 87.621,
+   "p99": 105.84
+  },
+  "conflicts": {
+   "attempts_total": 233,
+   "batches_with_retry": 11,
+   "by_writer": {
+    "1": 15,
+    "2": 34,
+    "3": 4,
+    "4": 23
+   },
+   "conflict_rate": 0.3262,
+   "max_retries_in_one_batch": 11,
+   "retry_histogram": {
+    "0": 149,
+    "11": 3,
+    "2": 1,
+    "4": 1,
+    "5": 4,
+    "6": 1,
+    "8": 1
+   },
+   "total": 76
+  },
+  "failed_or_exhausted": {
+   "batches": 3,
+   "by_writer": {
+    "1": 0,
+    "2": 2,
+    "3": 0,
+    "4": 1
+   },
+   "error_samples": [
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]",
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]",
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]"
+   ],
+   "errors": [
+    "GrafxWriteConflict"
+   ]
+  },
+  "integrity": {
+   "checks": {
+    "hot_last_writer": true,
+    "hot_rows_present": true,
+    "hot_version_sum": true,
+    "hot_versions": true,
+    "link_count": true,
+    "link_pairs": true,
+    "no_partial_batches": true,
+    "no_reader_errors": true,
+    "record_count": true,
+    "record_ids": true,
+    "verify_all": true
+   },
+   "numbers": {
+    "committed_batches": 157,
+    "expected_hot_version_sum": 314,
+    "expected_links": 3140,
+    "expected_records": 1570,
+    "extra_record_ids": 0,
+    "hot_version_mismatch_sample": {},
+    "hot_version_mismatches": 0,
+    "hot_version_sum": 314,
+    "missing_record_ids": 0,
+    "partial_batch_observations": 0,
+    "reader_errors": 0,
+    "stored_links": 3140,
+    "stored_records": 1570,
+    "verify_findings": 0
+   },
+   "ok": true
+  },
+  "pids": {
+   "orchestrator": 95206,
+   "readers": [
+    95365
+   ],
+   "writers": [
+    95361,
+    95362,
+    95363,
+    95364
+   ]
+  },
+  "read_latency_ms": {
+   "count": 1105,
+   "max": 277.353,
+   "mean": 7.727,
+   "min": 0.699,
+   "p50": 6.968,
+   "p95": 13.194,
+   "p99": 18.7
+  },
+  "readers": {
+   "errors": [],
+   "iterations": 1105,
+   "lookup_hits": 760,
+   "lookups": 1105,
+   "partial_batch_observations": 0
+  },
+  "recovery": {
+   "killed_pid": 95398,
+   "outcome": "ok",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 11504,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 285
+   },
+   "reopen_seconds": 0.0725,
+   "uncommitted_marker_visible": false,
+   "verify_findings": 0,
+   "what": "reopen time after SIGKILL of a process holding an open write transaction, at this store size"
+  },
+  "seed_verify_findings": 0,
+  "store": {
+   "dir_bytes_after": 8155512,
+   "dir_bytes_before": 5467309
+  },
+  "throughput": {
+   "basis": "wall time of the write phase (first writer start to last writer finish)",
+   "batches_committed": 157,
+   "batches_per_second": 14.0,
+   "records_committed": 1570,
+   "records_per_second": 139.95,
+   "write_phase_seconds": 11.2181
+  },
+  "wall_seconds": 13.335
+ },
+ "run_id": "20261029T191341Z-a5ad197-dirty",
+ "scenario": "workload:shared-hot-small"
+}

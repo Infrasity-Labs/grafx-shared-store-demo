@@ -24,6 +24,21 @@ def load_question_vectors():
     return json.loads((FIXTURES / "question_vectors.json").read_text(encoding="utf-8"))
 
 
+def load_eval_questions():
+    """The evaluation questions: id, text and intent. Labels are NOT in this file."""
+    return json.loads((FIXTURES / "eval_questions.json").read_text(encoding="utf-8"))["questions"]
+
+
+def load_eval_qrels():
+    """Question id -> relevant ticket ids and article ids. Used only to score results."""
+    return json.loads((FIXTURES / "eval_qrels.json").read_text(encoding="utf-8"))
+
+
+def load_eval_vectors():
+    """{"questions": {id: vector}, "incoming": {ticket id: vector}}"""
+    return json.loads((FIXTURES / "eval_vectors.json").read_text(encoding="utf-8"))
+
+
 def to_plain(obj):
     """Turn Grafx report objects into plain JSON-safe values."""
     if obj is None or isinstance(obj, (bool, int, float, str)):

@@ -1,0 +1,177 @@
+{
+ "elapsed_seconds": 7.927,
+ "grafx_version": "0.0.8",
+ "result": {
+  "batch_latency_ms": {
+   "count": 158,
+   "max": 2793.895,
+   "mean": 109.884,
+   "min": 19.705,
+   "p50": 34.146,
+   "p95": 295.5,
+   "p99": 2601.729
+  },
+  "commit_latency_ms": {
+   "count": 158,
+   "max": 115.156,
+   "mean": 38.664,
+   "min": 19.68,
+   "p50": 33.536,
+   "p95": 72.974,
+   "p99": 108.526
+  },
+  "config": {
+   "batch_size": 10,
+   "contention": "disjoint",
+   "description": "Baseline for shared-hot-small at the same writer count: 4 writers and 1 reader, each writer on its own private hot rows. Compare its conflicts and latency with shared-hot-small to separate the effect of sharing records from the effect of having 4 writers.",
+   "hot_records": 5,
+   "links_per_record": 1,
+   "max_attempts": 12,
+   "name": "disjoint-4w-small",
+   "readers": 1,
+   "records_per_writer": 400,
+   "seed": 1,
+   "writers": 4
+  },
+  "conflict_attempt_latency_ms": {
+   "count": 84,
+   "max": 93.151,
+   "mean": 39.907,
+   "min": 17.061,
+   "p50": 36.961,
+   "p95": 69.862,
+   "p99": 93.151
+  },
+  "conflicts": {
+   "attempts_total": 242,
+   "batches_with_retry": 16,
+   "by_writer": {
+    "1": 23,
+    "2": 23,
+    "3": 22,
+    "4": 16
+   },
+   "conflict_rate": 0.3471,
+   "max_retries_in_one_batch": 11,
+   "retry_histogram": {
+    "0": 144,
+    "1": 1,
+    "11": 4,
+    "2": 6,
+    "3": 2,
+    "5": 1,
+    "6": 1,
+    "8": 1
+   },
+   "total": 84
+  },
+  "failed_or_exhausted": {
+   "batches": 2,
+   "by_writer": {
+    "1": 0,
+    "2": 1,
+    "3": 1,
+    "4": 0
+   },
+   "error_samples": [
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]",
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]"
+   ],
+   "errors": [
+    "GrafxWriteConflict"
+   ]
+  },
+  "integrity": {
+   "checks": {
+    "hot_last_writer": true,
+    "hot_rows_present": true,
+    "hot_version_sum": true,
+    "hot_versions": true,
+    "link_count": true,
+    "link_pairs": true,
+    "no_partial_batches": true,
+    "no_reader_errors": true,
+    "record_count": true,
+    "record_ids": true,
+    "verify_all": true
+   },
+   "numbers": {
+    "committed_batches": 158,
+    "expected_hot_version_sum": 715,
+    "expected_links": 1580,
+    "expected_records": 1580,
+    "extra_record_ids": 0,
+    "hot_version_mismatch_sample": {},
+    "hot_version_mismatches": 0,
+    "hot_version_sum": 715,
+    "missing_record_ids": 0,
+    "partial_batch_observations": 0,
+    "reader_errors": 0,
+    "stored_links": 1580,
+    "stored_records": 1580,
+    "verify_findings": 0
+   },
+   "ok": true
+  },
+  "pids": {
+   "orchestrator": 95206,
+   "readers": [
+    95328
+   ],
+   "writers": [
+    95324,
+    95325,
+    95326,
+    95327
+   ]
+  },
+  "read_latency_ms": {
+   "count": 601,
+   "max": 33.604,
+   "mean": 7.803,
+   "min": 0.999,
+   "p50": 7.065,
+   "p95": 14.472,
+   "p99": 16.425
+  },
+  "readers": {
+   "errors": [],
+   "iterations": 601,
+   "lookup_hits": 328,
+   "lookups": 601,
+   "partial_batch_observations": 0
+  },
+  "recovery": {
+   "killed_pid": 95344,
+   "outcome": "ok",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 9999,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 424
+   },
+   "reopen_seconds": 0.0634,
+   "uncommitted_marker_visible": false,
+   "verify_findings": 0,
+   "what": "reopen time after SIGKILL of a process holding an open write transaction, at this store size"
+  },
+  "seed_verify_findings": 0,
+  "store": {
+   "dir_bytes_after": 7657633,
+   "dir_bytes_before": 5472007
+  },
+  "throughput": {
+   "basis": "wall time of the write phase (first writer start to last writer finish)",
+   "batches_committed": 158,
+   "batches_per_second": 25.58,
+   "records_committed": 1580,
+   "records_per_second": 255.78,
+   "write_phase_seconds": 6.1772
+  },
+  "wall_seconds": 7.927
+ },
+ "run_id": "20261029T191341Z-a5ad197-dirty",
+ "scenario": "workload:disjoint-4w-small"
+}

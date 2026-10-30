@@ -1,0 +1,13 @@
+{
+ "name": "disjoint-large",
+ "description": "Opt-in large run: 8 writers and 4 readers, 10000 records per writer on private hot rows (80000 records in total, below the 200000 guard so no --allow-large is needed). Takes minutes, not seconds. Shows throughput, conflicts and read latency at a bigger store size; not run or recorded by this repo.",
+ "writers": 8,
+ "readers": 4,
+ "records_per_writer": 10000,
+ "batch_size": 50,
+ "links_per_record": 1,
+ "contention": "disjoint",
+ "hot_records": 10,
+ "max_attempts": 12,
+ "seed": 7
+}

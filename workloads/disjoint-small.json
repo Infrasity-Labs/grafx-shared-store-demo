@@ -1,0 +1,13 @@
+{
+ "name": "disjoint-small",
+ "description": "Low contention on records: 2 writers and 1 reader. Every writer read-modify-writes only its own private hot rows, so no two writers ever touch the same record. Grafx reports write conflicts per partition, not per row, so conflicts can still occur; the result shows how many did.",
+ "writers": 2,
+ "readers": 1,
+ "records_per_writer": 400,
+ "batch_size": 10,
+ "links_per_record": 1,
+ "contention": "disjoint",
+ "hot_records": 5,
+ "max_attempts": 12,
+ "seed": 1
+}
