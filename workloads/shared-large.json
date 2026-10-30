@@ -1,0 +1,13 @@
+{
+ "name": "shared-large",
+ "description": "Opt-in large run: 8 writers and 4 readers, 10000 records per writer on one shared pool of 4 hot rows (80000 records in total, below the 200000 guard so no --allow-large is needed). Takes minutes. Meant to show behaviour under heavy record contention; not run or recorded by this repo.",
+ "writers": 8,
+ "readers": 4,
+ "records_per_writer": 10000,
+ "batch_size": 50,
+ "links_per_record": 1,
+ "contention": "shared",
+ "hot_records": 4,
+ "max_attempts": 12,
+ "seed": 7
+}

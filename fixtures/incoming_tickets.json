@@ -1,0 +1,18 @@
+[
+ {
+  "id": 3001,
+  "customer_id": 6,
+  "subject": "Login fails on all our devices",
+  "body": "Hello, since this morning nobody in our office can log in and the session expires right away. We have not changed any settings.",
+  "priority": "medium",
+  "status": "open"
+ },
+ {
+  "id": 3002,
+  "customer_id": 12,
+  "subject": "Report layout question",
+  "body": "Hi, the scheduled report arrives with a different column order than last month. Can you tell us how to fix the order?",
+  "priority": "low",
+  "status": "open"
+ }
+]

@@ -1,0 +1,178 @@
+{
+ "elapsed_seconds": 8.389,
+ "grafx_version": "0.0.8",
+ "result": {
+  "batch_latency_ms": {
+   "count": 158,
+   "max": 1616.781,
+   "mean": 89.993,
+   "min": 22.487,
+   "p50": 37.773,
+   "p95": 738.141,
+   "p99": 1062.351
+  },
+  "commit_latency_ms": {
+   "count": 158,
+   "max": 92.026,
+   "mean": 40.687,
+   "min": 22.464,
+   "p50": 37.262,
+   "p95": 72.38,
+   "p99": 83.326
+  },
+  "config": {
+   "batch_size": 10,
+   "contention": "shared",
+   "description": "Moderate contention: 4 writers and 1 reader sharing a pool of 50 hot rows, each batch touching a few of them at random. Expect some write conflicts, fewer than shared-hot-small, since two batches only collide when they pick an overlapping hot row.",
+   "hot_records": 50,
+   "links_per_record": 1,
+   "max_attempts": 12,
+   "name": "shared-wide-small",
+   "readers": 1,
+   "records_per_writer": 400,
+   "seed": 1,
+   "writers": 4
+  },
+  "conflict_attempt_latency_ms": {
+   "count": 70,
+   "max": 133.149,
+   "mean": 40.092,
+   "min": 16.203,
+   "p50": 34.791,
+   "p95": 66.99,
+   "p99": 133.149
+  },
+  "conflicts": {
+   "attempts_total": 229,
+   "batches_with_retry": 13,
+   "by_writer": {
+    "1": 26,
+    "2": 6,
+    "3": 13,
+    "4": 25
+   },
+   "conflict_rate": 0.3057,
+   "max_retries_in_one_batch": 11,
+   "retry_histogram": {
+    "0": 147,
+    "1": 1,
+    "11": 1,
+    "2": 1,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "8": 1
+   },
+   "total": 70
+  },
+  "failed_or_exhausted": {
+   "batches": 2,
+   "by_writer": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 1
+   },
+   "error_samples": [
+    "GrafxUnsupportedOperation: Slot 112 does not exist on page 24, which has 105 slots. [code=unsupported_operation retryable=False]",
+    "GrafxWriteConflict: This transaction read or wrote a partition that another commit wrote after its snapshot was taken. [code=write_conflict retryable=True]"
+   ],
+   "errors": [
+    "GrafxUnsupportedOperation",
+    "GrafxWriteConflict"
+   ]
+  },
+  "integrity": {
+   "checks": {
+    "hot_last_writer": true,
+    "hot_rows_present": true,
+    "hot_version_sum": true,
+    "hot_versions": true,
+    "link_count": true,
+    "link_pairs": true,
+    "no_partial_batches": true,
+    "no_reader_errors": true,
+    "record_count": true,
+    "record_ids": true,
+    "verify_all": true
+   },
+   "numbers": {
+    "committed_batches": 158,
+    "expected_hot_version_sum": 1475,
+    "expected_links": 1580,
+    "expected_records": 1580,
+    "extra_record_ids": 0,
+    "hot_version_mismatch_sample": {},
+    "hot_version_mismatches": 0,
+    "hot_version_sum": 1475,
+    "missing_record_ids": 0,
+    "partial_batch_observations": 0,
+    "reader_errors": 0,
+    "stored_links": 1580,
+    "stored_records": 1580,
+    "verify_findings": 0
+   },
+   "ok": true
+  },
+  "pids": {
+   "orchestrator": 92999,
+   "readers": [
+    93131
+   ],
+   "writers": [
+    93127,
+    93128,
+    93129,
+    93130
+   ]
+  },
+  "read_latency_ms": {
+   "count": 687,
+   "max": 16.749,
+   "mean": 7.298,
+   "min": 1.031,
+   "p50": 6.856,
+   "p95": 14.079,
+   "p99": 15.67
+  },
+  "readers": {
+   "errors": [],
+   "iterations": 687,
+   "lookup_hits": 446,
+   "lookups": 687,
+   "partial_batch_observations": 0
+  },
+  "recovery": {
+   "killed_pid": 93133,
+   "outcome": "ok",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 13265,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 0
+   },
+   "reopen_seconds": 0.0571,
+   "uncommitted_marker_visible": false,
+   "verify_findings": 0,
+   "what": "reopen time after SIGKILL of a process holding an open write transaction, at this store size"
+  },
+  "seed_verify_findings": 0,
+  "store": {
+   "dir_bytes_after": 9471814,
+   "dir_bytes_before": 5479685
+  },
+  "throughput": {
+   "basis": "wall time of the write phase (first writer start to last writer finish)",
+   "batches_committed": 158,
+   "batches_per_second": 23.62,
+   "records_committed": 1580,
+   "records_per_second": 236.16,
+   "write_phase_seconds": 6.6904
+  },
+  "wall_seconds": 8.388
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "scenario": "workload:shared-wide-small"
+}

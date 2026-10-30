@@ -11,22 +11,36 @@ import time
 from okto_grafx.errors import GrafxWriteConflict
 
 
-def write_with_conflict_retry(db, operation, attempts=12, pause=time.sleep, on_conflict=None):
-    """Run operation(txn) in a write transaction. Return (report, conflicts)."""
+def write_with_conflict_retry(db, operation, attempts=12, pause=time.sleep, on_conflict=None, on_attempt=None):
+    """Run operation(txn) in a write transaction. Return (report, conflicts).
+
+    on_attempt(attempt_number, seconds, outcome) is called once per attempt, right after
+    the transaction block (commit included) has finished and before any retry pause.
+    outcome is "committed", "conflict" or "error". It lets a caller measure commit
+    latency per attempt.
+    """
     if attempts < 1:
         raise ValueError("attempts must be positive")
     conflicts = 0
     for attempt in range(attempts):
         txn = None
         cleanup_complete = False
+        started = time.perf_counter()
+        outcome = "error"
         try:
             try:
                 with db.begin("write") as txn:
                     operation(txn)
+                outcome = "committed"
+            except GrafxWriteConflict:
+                outcome = "conflict"
+                raise
             finally:
                 if txn is not None and txn.active:
                     txn.rollback()
                 cleanup_complete = True
+                if on_attempt is not None:
+                    on_attempt(attempt + 1, time.perf_counter() - started, outcome)
             return txn.report, conflicts
         except GrafxWriteConflict as error:
             details = error.details or {}

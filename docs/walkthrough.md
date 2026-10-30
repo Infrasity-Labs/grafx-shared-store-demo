@@ -1,6 +1,6 @@
 # Walkthrough
 
-One short note per step. Each has the prompt you could give Claude Code, what it should build, and the check that proves it. Outputs are in `demo-state/`.
+One short note per step. Each has the prompt you could give Claude Code, what it should build, and the check that proves it. Outputs of the reference run are in `demo-state/`; a new run writes the same files to `runs/<run id>/`.
 
 The repo was built with Claude Code from [kickoff-prompt.md](kickoff-prompt.md). Grafx is a database, not an agent memory, so Claude Code is the builder and the demo itself is plain Python processes.
 
@@ -83,3 +83,14 @@ The repo was built with Claude Code from [kickoff-prompt.md](kickoff-prompt.md).
 **Build:** `node/read_schema.mjs` runs `python -m okto_grafx.cli schema PATH --json` without a shell. `ticketgraph/scoreboard.py` reads only the saved step outputs.
 
 **Check:** the snapshot has no script tags, the Node script lists all 10 tables, and `closeout-result.json` matches a fresh build. Output: `step10_closeout.json`.
+
+## Beyond the ten steps
+
+The steps above stay as individual demonstrations. These scenarios build on them. Each runs from `run_scenarios.py`, writes one JSON file into the run folder and has its own page.
+
+- **Retrieval evaluation** (`python run_scenarios.py eval`): lexical, hybrid and hybrid-plus-graph search scored against labelled questions, without a product id. [retrieval-evaluation.md](retrieval-evaluation.md)
+- **Application recovery** (`resume`): an importer killed before a commit and after a commit acknowledgement, restarted until it finishes, checked against the fixture and an uninterrupted control. [application-recovery.md](application-recovery.md)
+- **Support workflow** (`workflow`): intake, triage with a graph-driven decision, maintainer, auditor, killed twice and restarted. [support-workflow.md](support-workflow.md)
+- **Workloads** (`workload`): opt-in concurrency configurations with latency percentiles, conflicts and integrity checks. [workloads.md](workloads.md)
+
+Step 9 also records content digests of the original, the restored store and the logical import, and whether system history survived each. The runs are named, and can be compared, as described in [artifacts-and-runs.md](artifacts-and-runs.md).

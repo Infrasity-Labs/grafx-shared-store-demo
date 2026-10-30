@@ -1,0 +1,61 @@
+{
+ "commit": {
+  "dirty": true,
+  "sha": "a5ad197315f6ceefef5660a5ed1b1e20cc6aebe7",
+  "source": "git"
+ },
+ "config": {
+  "arguments": [
+   "--workdir",
+   "<path>/work",
+   "--state-dir",
+   "runs/20261029T190205Z-a5ad197-dirty",
+   "--run-id",
+   "20261029T190205Z-a5ad197-dirty",
+   "--label",
+   "local-macos"
+  ],
+  "resumed_with": {
+   "arguments": [
+    "workflow",
+    "--store",
+    "<path>/graph",
+    "--state-dir",
+    "runs/20261029T190205Z-a5ad197-dirty",
+    "--run-id",
+    "20261029T190205Z-a5ad197-dirty",
+    "--label",
+    "local-macos",
+    "--workdir",
+    "<path>/wf2"
+   ],
+   "scenarios": [
+    "workflow"
+   ]
+  },
+  "steps": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ "finished_at": "2026-10-29T19:04:08+00:00",
+ "grafx_pinned_in_requirements": "0.0.8",
+ "grafx_version": "0.0.8",
+ "in_container": false,
+ "label": "local-macos",
+ "machine": "arm64",
+ "node": "v26.8.1",
+ "platform": "macOS-26.3-arm64-arm-64bit",
+ "python": "3.12.14",
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "started_at": "2026-10-29T19:02:06+00:00",
+ "status": "complete"
+}

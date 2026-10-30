@@ -1,0 +1,13 @@
+{
+ "name": "disjoint-4w-small",
+ "description": "Baseline for shared-hot-small at the same writer count: 4 writers and 1 reader, each writer on its own private hot rows. Compare its conflicts and latency with shared-hot-small to separate the effect of sharing records from the effect of having 4 writers.",
+ "writers": 4,
+ "readers": 1,
+ "records_per_writer": 400,
+ "batch_size": 10,
+ "links_per_record": 1,
+ "contention": "disjoint",
+ "hot_records": 5,
+ "max_attempts": 12,
+ "seed": 1
+}

@@ -1,0 +1,262 @@
+{
+ "article_diff": {
+  "article_id": 25,
+  "as_of_after": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+   "revision": 2
+  },
+  "as_of_before": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+   "revision": 1
+  },
+  "before_commit_csn": 8130,
+  "correction_csn": 8141,
+  "diff_rows": [
+   {
+    "operation": "updated",
+    "properties": [
+     {
+      "after": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+      "before": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+      "name": "body"
+     },
+     {
+      "after": 2,
+      "before": 1,
+      "name": "revision"
+     }
+    ]
+   }
+  ],
+  "verify_findings": 0,
+  "versions": [
+   {
+    "revision": 1,
+    "system_from": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 305
+    },
+    "system_to": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 8141
+    }
+   },
+   {
+    "revision": 2,
+    "system_from": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 8141
+    },
+    "system_to": null
+   }
+  ]
+ },
+ "backup_restore": {
+  "backup_dir_bytes": 29039173,
+  "backup_files": 49,
+  "backup_payload_bytes": 29031644,
+  "fork_counts": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "fork_counts_match": true,
+  "fork_new_uuid": true,
+  "fork_verify_findings": 0,
+  "integrity": {
+   "content_digest_fork": "a0bab35cf9e80ca28a609f013261f1aecdedb4ff7512a950cb8a517c9b97a85d",
+   "content_digest_original": "a0bab35cf9e80ca28a609f013261f1aecdedb4ff7512a950cb8a517c9b97a85d",
+   "content_digest_restored": "a0bab35cf9e80ca28a609f013261f1aecdedb4ff7512a950cb8a517c9b97a85d",
+   "digest_scope": "every property of every node and the endpoints of every relationship, all 10 tables; native record ids and history timestamps are not part of it",
+   "fork_differing_tables": [],
+   "fork_digest_matches": true,
+   "history_fork": {
+    "article_id": 25,
+    "article_versions": null,
+    "commit_entries": null,
+    "commit_history_error": {
+     "code": "unsupported_operation",
+     "error_type": "GrafxUnsupportedOperation",
+     "message": "Commit history is not enabled in this snapshot."
+    }
+   },
+   "history_original": {
+    "article_id": 25,
+    "article_versions": [
+     {
+      "body_sha256": "b956fbe9551c3323edb934928b948e7dc3abc49694e883d1ad7f02a85fb6ee3a",
+      "revision": 1,
+      "system_from_csn": 305,
+      "system_to_csn": 8141
+     },
+     {
+      "body_sha256": "839e3773d45379f6510227c547e5feea522ea1e96468a07aee9de4282f1f738d",
+      "revision": 2,
+      "system_from_csn": 8141,
+      "system_to_csn": null
+     }
+    ],
+    "commit_csns_sha256": "490593adb69a7ef285da36a74c53a89ff38714bda9be0b925897e4b233c2ac07",
+    "commit_entries": 88,
+    "first_commit_csn": 19,
+    "last_commit_csn": 8141
+   },
+   "history_restored": {
+    "article_id": 25,
+    "article_versions": [
+     {
+      "body_sha256": "b956fbe9551c3323edb934928b948e7dc3abc49694e883d1ad7f02a85fb6ee3a",
+      "revision": 1,
+      "system_from_csn": 305,
+      "system_to_csn": 8141
+     },
+     {
+      "body_sha256": "839e3773d45379f6510227c547e5feea522ea1e96468a07aee9de4282f1f738d",
+      "revision": 2,
+      "system_from_csn": 8141,
+      "system_to_csn": null
+     }
+    ],
+    "commit_csns_sha256": "490593adb69a7ef285da36a74c53a89ff38714bda9be0b925897e4b233c2ac07",
+    "commit_entries": 88,
+    "first_commit_csn": 19,
+    "last_commit_csn": 8141
+   },
+   "history_survives_logical_import": false,
+   "history_survives_physical_restore": true,
+   "logical_import_gets_new_database_identity": true,
+   "physical_restore_keeps_database_identity": true,
+   "restored_differing_tables": [],
+   "restored_digest_matches": true,
+   "rows_hashed": 3240,
+   "tables_compared": 10
+  },
+  "logical_package_bytes": 1043151,
+  "logical_rows_exported": 3240,
+  "logical_rows_imported": 3240,
+  "logical_transfer": {
+   "supported": true
+  },
+  "original_dir_bytes": 29031727,
+  "physical_backup": {
+   "supported": true
+  },
+  "platform": "linux",
+  "processes_alive_at_restore": 0,
+  "restored_counts": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "restored_counts_match": true,
+  "restored_dir_bytes": 29031644,
+  "restored_same_uuid": true,
+  "restored_verify_findings": 0
+ },
+ "crash": {
+  "committed_expected": 20,
+  "committed_tickets_found": 20,
+  "recovery_outcome": "clean",
+  "signal": "SIGKILL",
+  "unfinished_batch_found": 0,
+  "verify_findings": 0
+ },
+ "hybrid": {
+  "questions": 10,
+  "text_top1_tied_with_top2": 0,
+  "top1_changed_no_graph": 5,
+  "top1_changed_with_graph": 7,
+  "top5_set_changed_with_graph": 9
+ },
+ "run": {
+  "commit": {
+   "dirty": true,
+   "sha": "a5ad197315f6ceefef5660a5ed1b1e20cc6aebe7",
+   "source": "environment"
+  },
+  "grafx_version": "0.0.8",
+  "label": "docker-linux",
+  "manifest": "run-manifest.json",
+  "platform": "Linux-7.0.12-linuxkit-aarch64-with-glibc2.41",
+  "python": "3.12.16",
+  "run_id": "20261029T191341Z-a5ad197-dirty",
+  "step_files": [
+   "step01_setup.json",
+   "step02_first_load.json",
+   "step03_two_writers.json",
+   "step04_snapshot_reads.json",
+   "step05_kill_and_recover.json",
+   "step06_full_text.json",
+   "step07_hybrid.json",
+   "step08_time_travel.json",
+   "step09_backup_restore.json",
+   "step10_closeout.json"
+  ]
+ },
+ "seconds_by_step": {
+  "1": 0.593,
+  "10": 0.74,
+  "2": 2.501,
+  "3": 6.694,
+  "4": 1.83,
+  "5": 2.39,
+  "6": 4.715,
+  "7": 1.834,
+  "8": 2.083,
+  "9": 12.622
+ },
+ "stale_snapshot": {
+  "new_read_saw_commit": true,
+  "new_read_tickets": 510,
+  "old_snapshot_tickets_after_commit": 500,
+  "old_snapshot_tickets_before": 500,
+  "old_snapshot_unchanged": true
+ },
+ "steps_recorded": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "text_search": {
+  "keyword_questions": 10,
+  "keyword_with_hits": 10,
+  "phrase_questions": 3,
+  "phrase_with_hits": 3
+ },
+ "tickets": {
+  "core_count_in_store_after_step3": 500,
+  "core_count_matches_fixture": true,
+  "core_fixture_count": 500,
+  "final_ticket_count": 530,
+  "step2_loaded": 200,
+  "step3_loaded": 300,
+  "step4_late_batch_loaded": 10,
+  "step5_committed_before_kill": 20
+ },
+ "writers": {
+  "all_commits_durable": true,
+  "conflicts_by_importer": {
+   "A": 7,
+   "B": 5
+  },
+  "conflicts_total": 12,
+  "lost_commits": 0
+ }
+}

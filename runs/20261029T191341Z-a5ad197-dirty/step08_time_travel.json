@@ -1,0 +1,59 @@
+{
+ "elapsed_seconds": 2.083,
+ "grafx_version": "0.0.8",
+ "name": "time_travel",
+ "result": {
+  "article_id": 25,
+  "as_of_after": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+   "revision": 2
+  },
+  "as_of_before": {
+   "body": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+   "revision": 1
+  },
+  "before_commit_csn": 8130,
+  "correction_csn": 8141,
+  "diff_rows": [
+   {
+    "operation": "updated",
+    "properties": [
+     {
+      "after": "This article covers webhook timeout in Cobalt Gateway. A webhook call is cancelled after 30 seconds, so reply with a 200 status first and do slow work later. Check the delivery log in the dashboard, then follow the steps in the settings page for webhook timeout.",
+      "before": "This article covers webhook timeout in Cobalt Gateway. Customers often write that the webhook returns a 504 timeout for every event. Check the account status first, then follow the steps in the settings page for webhook timeout.",
+      "name": "body"
+     },
+     {
+      "after": 2,
+      "before": 1,
+      "name": "revision"
+     }
+    ]
+   }
+  ],
+  "verify_findings": 0,
+  "versions": [
+   {
+    "revision": 1,
+    "system_from": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 305
+    },
+    "system_to": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 8141
+    }
+   },
+   {
+    "revision": 2,
+    "system_from": {
+     "database_uuid": "598cc883ab864c7782c2823ea1d46c7d",
+     "sequence": 8141
+    },
+    "system_to": null
+   }
+  ]
+ },
+ "run_id": "20261029T191341Z-a5ad197-dirty",
+ "step": 8
+}

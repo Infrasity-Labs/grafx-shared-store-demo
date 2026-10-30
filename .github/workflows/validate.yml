@@ -1,5 +1,8 @@
 name: validate
 
+# The fast check: unit tests, recorded-output checks, repo checks and a short real run of steps 1 to 4.
+# The full run of all ten steps and the scenarios is in integration.yml.
+
 on:
   push:
   pull_request:
@@ -29,7 +32,7 @@ jobs:
           test "$(python -c 'import okto_grafx; print(okto_grafx.__version__)')" = "$(sed -n 's/^okto-grafx==//p' requirements.txt)"
 
       - name: Compile check
-        run: python -m compileall -q ticketgraph scripts tests run_demo.py
+        run: python -m compileall -q ticketgraph scripts tests run_demo.py run_scenarios.py
 
       - name: Node check
         run: node --check node/read_schema.mjs

@@ -1,0 +1,108 @@
+{
+ "elapsed_seconds": 0.622,
+ "grafx_version": "0.0.8",
+ "name": "closeout",
+ "result": {
+  "customer": "Brightloom Cafe",
+  "customer_tickets": 14,
+  "html_bytes": 4672,
+  "html_snapshot": "customer-1-tickets.html",
+  "node_cli_schema": {
+   "returned_spaces": 1,
+   "returned_tables": 10,
+   "tables": [
+    {
+     "columns": [
+      "id",
+      "name",
+      "summary"
+     ],
+     "kind": "node",
+     "name": "Product"
+    },
+    {
+     "columns": [
+      "id",
+      "name"
+     ],
+     "kind": "node",
+     "name": "Customer"
+    },
+    {
+     "columns": [
+      "id",
+      "title",
+      "body",
+      "revision"
+     ],
+     "kind": "node",
+     "name": "Article"
+    },
+    {
+     "columns": [
+      "id",
+      "subject",
+      "body",
+      "priority",
+      "status",
+      "embedding"
+     ],
+     "kind": "node",
+     "name": "Ticket"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "Opened"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "Mentions"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "About"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "Covers"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "Uses"
+    },
+    {
+     "columns": [
+      "_from",
+      "_to"
+     ],
+     "kind": "rel",
+     "name": "Related"
+    }
+   ]
+  },
+  "node_version": "v26.8.1",
+  "snapshot_is_separate_small_store": true
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "step": 10
+}

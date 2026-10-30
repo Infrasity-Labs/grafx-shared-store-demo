@@ -1,4 +1,7 @@
 """Auditor: verify, history and backup. Uses its own handle."""
+import difflib
+import re
+
 from okto_grafx import CommitId, connect
 
 from .common import to_plain
@@ -44,4 +47,39 @@ def time_travel(db, article_id, new_body):
         "diff_rows": [{"operation": r.operation,
                        "properties": [{"name": p.name, "before": p.before, "after": p.after}
                                       for p in r.properties]} for r in diff.rows],
+    }
+
+
+def sentences(text):
+    return [s for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s]
+
+
+def article_audit(db, article_id):
+    """What changed in an article's last version, read only from system history.
+
+    Needs nothing from whoever made the change: it looks up the article's versions, takes the last two,
+    and compares them with system_as_of and system_diff.
+    """
+    newest = latest_commit(db)
+    current = article_row(db.system_as_of(newest, tables=("Article",)), article_id)
+    versions = db.system_versions("Article", current.record_id).versions
+    if len(versions) < 2:
+        return {"article_id": article_id, "versions": len(versions), "changed": False}
+    previous, last = versions[-2], versions[-1]
+    before = article_row(db.system_as_of(previous.system_from, tables=("Article",)), article_id)
+    after = article_row(db.system_as_of(last.system_from, tables=("Article",)), article_id)
+    diff = db.system_diff(previous.system_from, last.system_from, tables=("Article",))
+    old_s, new_s = sentences(before.values[2]), sentences(after.values[2])
+    return {
+        "article_id": article_id,
+        "versions": len(versions),
+        "changed": True,
+        "previous_version_csn": previous.system_from.sequence,
+        "current_version_csn": last.system_from.sequence,
+        "revision_before": before.values[3],
+        "revision_after": after.values[3],
+        "sentences_added": [s for s in new_s if s not in old_s],
+        "sentences_removed": [s for s in old_s if s not in new_s],
+        "diff_operations": [r.operation for r in diff.rows],
+        "diff_properties_changed": sorted({p.name for r in diff.rows for p in r.properties}),
     }

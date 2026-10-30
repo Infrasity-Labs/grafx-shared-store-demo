@@ -1,0 +1,173 @@
+{
+ "elapsed_seconds": 7.139,
+ "grafx_version": "0.0.8",
+ "result": {
+  "batch_latency_ms": {
+   "count": 160,
+   "max": 1940.265,
+   "mean": 116.019,
+   "min": 17.594,
+   "p50": 31.174,
+   "p95": 734.236,
+   "p99": 1564.16
+  },
+  "commit_latency_ms": {
+   "count": 160,
+   "max": 139.415,
+   "mean": 35.723,
+   "min": 17.574,
+   "p50": 30.79,
+   "p95": 70.971,
+   "p99": 139.069
+  },
+  "config": {
+   "batch_size": 10,
+   "contention": "disjoint",
+   "description": "Baseline for shared-hot-small at the same writer count: 4 writers and 1 reader, each writer on its own private hot rows. Compare its conflicts and latency with shared-hot-small to separate the effect of sharing records from the effect of having 4 writers.",
+   "hot_records": 5,
+   "links_per_record": 1,
+   "max_attempts": 12,
+   "name": "disjoint-4w-small",
+   "readers": 1,
+   "records_per_writer": 400,
+   "seed": 1,
+   "writers": 4
+  },
+  "conflict_attempt_latency_ms": {
+   "count": 77,
+   "max": 93.108,
+   "mean": 31.013,
+   "min": 13.524,
+   "p50": 27.646,
+   "p95": 61.148,
+   "p99": 93.108
+  },
+  "conflicts": {
+   "attempts_total": 237,
+   "batches_with_retry": 15,
+   "by_writer": {
+    "1": 20,
+    "2": 10,
+    "3": 23,
+    "4": 24
+   },
+   "conflict_rate": 0.3249,
+   "max_retries_in_one_batch": 10,
+   "retry_histogram": {
+    "0": 145,
+    "10": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 2,
+    "6": 3,
+    "7": 1,
+    "8": 1
+   },
+   "total": 77
+  },
+  "failed_or_exhausted": {
+   "batches": 0,
+   "by_writer": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0
+   },
+   "error_samples": [],
+   "errors": []
+  },
+  "integrity": {
+   "checks": {
+    "hot_last_writer": true,
+    "hot_rows_present": true,
+    "hot_version_sum": true,
+    "hot_versions": true,
+    "link_count": true,
+    "link_pairs": true,
+    "no_partial_batches": true,
+    "no_reader_errors": true,
+    "record_count": true,
+    "record_ids": true,
+    "verify_all": true
+   },
+   "numbers": {
+    "committed_batches": 160,
+    "expected_hot_version_sum": 724,
+    "expected_links": 1600,
+    "expected_records": 1600,
+    "extra_record_ids": 0,
+    "hot_version_mismatch_sample": {},
+    "hot_version_mismatches": 0,
+    "hot_version_sum": 724,
+    "missing_record_ids": 0,
+    "partial_batch_observations": 0,
+    "reader_errors": 0,
+    "stored_links": 1600,
+    "stored_records": 1600,
+    "verify_findings": 0
+   },
+   "ok": true
+  },
+  "pids": {
+   "orchestrator": 92999,
+   "readers": [
+    93124
+   ],
+   "writers": [
+    93120,
+    93121,
+    93122,
+    93123
+   ]
+  },
+  "read_latency_ms": {
+   "count": 576,
+   "max": 16.907,
+   "mean": 7.186,
+   "min": 0.864,
+   "p50": 6.805,
+   "p95": 14.003,
+   "p99": 15.052
+  },
+  "readers": {
+   "errors": [],
+   "iterations": 576,
+   "lookup_hits": 440,
+   "lookups": 576,
+   "partial_batch_observations": 0
+  },
+  "recovery": {
+   "killed_pid": 93126,
+   "outcome": "ok",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 10135,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 489
+   },
+   "reopen_seconds": 0.0649,
+   "uncommitted_marker_visible": false,
+   "verify_findings": 0,
+   "what": "reopen time after SIGKILL of a process holding an open write transaction, at this store size"
+  },
+  "seed_verify_findings": 0,
+  "store": {
+   "dir_bytes_after": 7809435,
+   "dir_bytes_before": 5472007
+  },
+  "throughput": {
+   "basis": "wall time of the write phase (first writer start to last writer finish)",
+   "batches_committed": 160,
+   "batches_per_second": 28.85,
+   "records_committed": 1600,
+   "records_per_second": 288.53,
+   "write_phase_seconds": 5.5453
+  },
+  "wall_seconds": 7.138
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "scenario": "workload:disjoint-4w-small"
+}

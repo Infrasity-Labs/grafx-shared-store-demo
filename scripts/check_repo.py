@@ -1,4 +1,5 @@
-"""Repo checks: JSON files, relative links, em dashes, key-like strings, machine paths, compile."""
+"""Repo checks: JSON files, relative links, em dashes, key-like strings, machine paths, compile,
+and that the docs name the Grafx version pinned in requirements.txt."""
 import json
 import re
 import sys
@@ -20,8 +21,29 @@ def files():
             yield path
 
 
+def pinned_version():
+    for line in (ROOT / "requirements.txt").read_text().splitlines():
+        if line.startswith("okto-grafx=="):
+            return line.split("==", 1)[1].strip()
+    return None
+
+
+def version_problems():
+    """A Grafx bump must update the docs that say what was verified, or this check fails."""
+    pin = pinned_version()
+    if pin is None:
+        return ["requirements.txt: no okto-grafx== pin"]
+    out = []
+    for doc, needle in (("docs/VERIFIED.md", f"okto-grafx=={pin}"), ("docs/PRODUCT-OBSERVATIONS.md", f"Grafx {pin}"),
+                        ("README.md", f"**{pin}**")):
+        path = ROOT / doc
+        if not path.exists() or needle not in path.read_text(encoding="utf-8"):
+            out.append(f"{doc}: does not mention the pinned Grafx version ({needle!r}). Re-verify and update it.")
+    return out
+
+
 def main():
-    problems = []
+    problems = version_problems()
     for path in files():
         rel = path.relative_to(ROOT)
         if path.suffix not in TEXT_SUFFIXES and path.name not in {"Dockerfile", "LICENSE"}:

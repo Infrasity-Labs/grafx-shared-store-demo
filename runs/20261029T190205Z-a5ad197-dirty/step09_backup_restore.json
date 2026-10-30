@@ -1,0 +1,113 @@
+{
+ "elapsed_seconds": 2.341,
+ "grafx_version": "0.0.8",
+ "name": "backup_restore",
+ "result": {
+  "counts_original": {
+   "about": 530,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 530,
+   "opened": 530,
+   "products": 5,
+   "related": 985,
+   "tickets": 530
+  },
+  "digests": {
+   "original": {
+    "About": {
+     "digest": "6d86171fa8179123933c90bd267f3ee6a96ac4db79adf9428f989d840c50a0fb",
+     "kind": "rel",
+     "rows": 530
+    },
+    "Article": {
+     "digest": "62bebbd2dabac129a65374357c8e1317d58151e50aae5a8f74bb8ddcad09b11d",
+     "kind": "node",
+     "rows": 40
+    },
+    "Covers": {
+     "digest": "42148d1e218724b6f6be2df0a85c02a0cbd1d03f06b644f986959af58c5c806b",
+     "kind": "rel",
+     "rows": 40
+    },
+    "Customer": {
+     "digest": "6cda8d03fab2ede6c9aacc5696251851ed0ea456c54620018ce771f471b827b1",
+     "kind": "node",
+     "rows": 25
+    },
+    "Mentions": {
+     "digest": "07e577225619dbe2842b5508dc8e753ade8204d07de0bb818b58c539ba93fa1a",
+     "kind": "rel",
+     "rows": 530
+    },
+    "Opened": {
+     "digest": "ad88ea028f206a356e1cbfc3eac9f9e49caf8f764e5ffaeb37bd83f5c0671ff1",
+     "kind": "rel",
+     "rows": 530
+    },
+    "Product": {
+     "digest": "c3b47e66cc7b3859d6c5109c81d77850c9f3da96a11744675db30e41622367a6",
+     "kind": "node",
+     "rows": 5
+    },
+    "Related": {
+     "digest": "df9e5b7239a47491d5a7334fa32eee76d6a7fcbacf269689cac5de3253d36291",
+     "kind": "rel",
+     "rows": 985
+    },
+    "Ticket": {
+     "digest": "d4c16119deec452a2cf3ed8edd581f5ccd8da7e733b8e1461e245d13e8c4f275",
+     "kind": "node",
+     "rows": 530
+    },
+    "Uses": {
+     "digest": "d76b20760283f5f44f7ee36886d1835b5db0a670fb444ac93d0a3abe6a6ab6f1",
+     "kind": "rel",
+     "rows": 25
+    }
+   }
+  },
+  "integrity": {
+   "content_digest_original": "a0bab35cf9e80ca28a609f013261f1aecdedb4ff7512a950cb8a517c9b97a85d",
+   "digest_scope": "every property of every node and the endpoints of every relationship, all 10 tables; native record ids and history timestamps are not part of it",
+   "history_original": {
+    "article_id": 25,
+    "article_versions": [
+     {
+      "body_sha256": "b956fbe9551c3323edb934928b948e7dc3abc49694e883d1ad7f02a85fb6ee3a",
+      "revision": 1,
+      "system_from_csn": 305,
+      "system_to_csn": 8141
+     },
+     {
+      "body_sha256": "839e3773d45379f6510227c547e5feea522ea1e96468a07aee9de4282f1f738d",
+      "revision": 2,
+      "system_from_csn": 8141,
+      "system_to_csn": null
+     }
+    ],
+    "commit_csns_sha256": "625b59f727cfa19e86a87b85dbb88037c34af52324bb36196b5206e824629669",
+    "commit_entries": 88,
+    "first_commit_csn": 19,
+    "last_commit_csn": 8141
+   },
+   "rows_hashed": 3240,
+   "tables_compared": 10
+  },
+  "logical_transfer": {
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "original_dir_bytes": 29031626,
+  "physical_backup": {
+   "code": "unsupported_operation",
+   "error_type": "GrafxUnsupportedOperation",
+   "message": "This platform has no supported atomic no-replace directory publication.",
+   "supported": false
+  },
+  "platform": "darwin"
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "step": 9
+}

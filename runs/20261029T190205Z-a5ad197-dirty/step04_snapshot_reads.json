@@ -1,0 +1,44 @@
+{
+ "elapsed_seconds": 1.361,
+ "grafx_version": "0.0.8",
+ "name": "snapshot_reads",
+ "result": {
+  "late_commit_durable": true,
+  "late_tickets_loaded": 10,
+  "new_read": {
+   "about": 510,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 510,
+   "opened": 510,
+   "products": 5,
+   "related": 0,
+   "tickets": 510
+  },
+  "new_read_saw_commit": true,
+  "old_after": {
+   "about": 500,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 500,
+   "opened": 500,
+   "products": 5,
+   "related": 0,
+   "tickets": 500
+  },
+  "old_before": {
+   "about": 500,
+   "articles": 40,
+   "customers": 25,
+   "mentions": 500,
+   "opened": 500,
+   "products": 5,
+   "related": 0,
+   "tickets": 500
+  },
+  "old_snapshot_unchanged": true,
+  "searcher_pid": 92988
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "step": 4
+}

@@ -1,0 +1,725 @@
+{
+ "elapsed_seconds": 6.926,
+ "grafx_version": "0.0.8",
+ "result": {
+  "control": {
+   "description": "same job, same rows, one uninterrupted importer, separate store",
+   "differing_tables": [],
+   "digest": "99c6a43829ddded75cdb211182a8bb9438fc6da1ba17d21e21880a9f1bae70dd",
+   "digests_match": true,
+   "resumed_digest": "99c6a43829ddded75cdb211182a8bb9438fc6da1ba17d21e21880a9f1bae70dd",
+   "table_rows": {
+    "About": 100,
+    "Article": 40,
+    "Checkpoint": 11,
+    "Covers": 40,
+    "Customer": 25,
+    "Mentions": 100,
+    "Opened": 100,
+    "Product": 5,
+    "Ticket": 100,
+    "Uses": 25
+   }
+  },
+  "duplicate_link_probe": {
+   "blind_replay_of_whole_batch": {
+    "error_type": "GrafxQueryError",
+    "refused": true,
+    "tickets_after": 100
+   },
+   "grafx_accepted_duplicate_links": true,
+   "opened_links_after_rollback": 100,
+   "opened_links_before": 100,
+   "opened_links_inside_probe_transaction": 110,
+   "probe_rolled_back": true
+  },
+  "final_state": {
+   "committed_units": [
+    "batch-00000",
+    "batch-00001",
+    "batch-00002",
+    "batch-00003",
+    "batch-00004",
+    "batch-00005",
+    "batch-00006",
+    "batch-00007",
+    "batch-00008",
+    "batch-00009",
+    "static"
+   ],
+   "recovery_outcome": "clean",
+   "recovery_report": {
+    "findings": [],
+    "last_good_lsn": 1417,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 325
+   },
+   "relationships": {
+    "About": 100,
+    "Mentions": 100,
+    "Opened": 100
+   },
+   "ticket_id_max": 100,
+   "ticket_id_min": 1,
+   "tickets": 100,
+   "verify_findings": 0
+  },
+  "final_verification": {
+   "checkpoint_units": 11,
+   "checkpoints_match_expected_units": true,
+   "content_mismatches": [],
+   "duplicate_relationships": 0,
+   "expected_ticket_count": 100,
+   "missing_ids": [],
+   "relationship_counts": {
+    "About": 100,
+    "Mentions": 100,
+    "Opened": 100
+   },
+   "relationships_match_fixture": true,
+   "representative_tickets": [
+    {
+     "id": 1,
+     "matches_fixture": true,
+     "priority": "medium",
+     "status": "closed",
+     "subject": "Sync stall: sync stalls at 99 percent on a large folder"
+    },
+    {
+     "id": 51,
+     "matches_fixture": true,
+     "priority": "high",
+     "status": "open",
+     "subject": "Report export: export csv from a report gives garbled characters"
+    },
+    {
+     "id": 100,
+     "matches_fixture": true,
+     "priority": "medium",
+     "status": "closed",
+     "subject": "Webhook timeout: the webhook returns a 504 timeout for every event"
+    }
+   ],
+   "ticket_count": 100,
+   "ticket_ids_match_fixture": true,
+   "unexpected_ids": [],
+   "verify_findings": 0
+  },
+  "guarantees": {
+   "application_ticketgraph": [
+    "Knowing which batches are done: Checkpoint rows, written in the same transaction as the batch.",
+    "Resuming: a restarted importer skips committed batches and does the rest.",
+    "Not duplicating relationships: Grafx accepts a second identical relationship, so the application must never replay a committed batch (shown by the duplicate link probe).",
+    "Refusing a changed input: a checkpoint carries a digest of its batch's ticket ids."
+   ],
+   "grafx_database": [
+    "A commit is atomic: a batch's tickets, links and checkpoint row are all there or none are.",
+    "A commit reported durable survives SIGKILL of the writer.",
+    "A transaction that never committed is not visible after the store is reopened (recovery).",
+    "A duplicate primary key is refused, and the refused transaction writes nothing."
+   ]
+  },
+  "input": {
+   "batch_size": 10,
+   "batches": 10,
+   "first_ticket_id": 1,
+   "last_ticket_id": 100,
+   "tickets": 100
+  },
+  "job": "import-demo",
+  "ok": true,
+  "phases": [
+   {
+    "crash_injected": "before_commit:3",
+    "events": [
+     {
+      "actor": "run1",
+      "already_committed": [],
+      "event": "start",
+      "pid": 93003
+     },
+     {
+      "actor": "run1",
+      "csn": 315,
+      "event": "committed",
+      "pid": 93003,
+      "unit": "static"
+     },
+     {
+      "actor": "run1",
+      "event": "in_transaction",
+      "pid": 93003,
+      "unit": "batch-00000"
+     },
+     {
+      "actor": "run1",
+      "csn": 429,
+      "event": "committed",
+      "pid": 93003,
+      "unit": "batch-00000"
+     },
+     {
+      "actor": "run1",
+      "event": "in_transaction",
+      "pid": 93003,
+      "unit": "batch-00001"
+     },
+     {
+      "actor": "run1",
+      "csn": 543,
+      "event": "committed",
+      "pid": 93003,
+      "unit": "batch-00001"
+     },
+     {
+      "actor": "run1",
+      "event": "in_transaction",
+      "pid": 93003,
+      "unit": "batch-00002"
+     },
+     {
+      "actor": "run1",
+      "csn": 651,
+      "event": "committed",
+      "pid": 93003,
+      "unit": "batch-00002"
+     },
+     {
+      "actor": "run1",
+      "event": "in_transaction",
+      "pid": 93003,
+      "unit": "batch-00003"
+     },
+     {
+      "actor": "run1",
+      "event": "sigkill_self",
+      "pid": 93003,
+      "point": "before_commit",
+      "unit": "batch-00003"
+     }
+    ],
+    "importer": "run1",
+    "phase": "1 first run, killed inside batch 3 before its commit",
+    "returncode": -9,
+    "state_after": {
+     "committed_units": [
+      "batch-00000",
+      "batch-00001",
+      "batch-00002",
+      "static"
+     ],
+     "recovery_outcome": "clean",
+     "recovery_report": {
+      "findings": [],
+      "last_good_lsn": 651,
+      "ledger_entries_created": 0,
+      "outcome": "clean",
+      "records_discarded": 0,
+      "records_replayed": 107
+     },
+     "relationships": {
+      "About": 30,
+      "Mentions": 30,
+      "Opened": 30
+     },
+     "ticket_id_max": 30,
+     "ticket_id_min": 1,
+     "tickets": 30,
+     "verify_findings": 0
+    },
+    "stats": null
+   },
+   {
+    "crash_injected": "after_commit:6",
+    "events": [
+     {
+      "actor": "run2",
+      "already_committed": [
+       "batch-00000",
+       "batch-00001",
+       "batch-00002",
+       "static"
+      ],
+      "event": "start",
+      "pid": 93004
+     },
+     {
+      "actor": "run2",
+      "event": "skipped",
+      "pid": 93004,
+      "unit": "batch-00000"
+     },
+     {
+      "actor": "run2",
+      "event": "skipped",
+      "pid": 93004,
+      "unit": "batch-00001"
+     },
+     {
+      "actor": "run2",
+      "event": "skipped",
+      "pid": 93004,
+      "unit": "batch-00002"
+     },
+     {
+      "actor": "run2",
+      "event": "in_transaction",
+      "pid": 93004,
+      "unit": "batch-00003"
+     },
+     {
+      "actor": "run2",
+      "csn": 765,
+      "event": "committed",
+      "pid": 93004,
+      "unit": "batch-00003"
+     },
+     {
+      "actor": "run2",
+      "event": "in_transaction",
+      "pid": 93004,
+      "unit": "batch-00004"
+     },
+     {
+      "actor": "run2",
+      "csn": 873,
+      "event": "committed",
+      "pid": 93004,
+      "unit": "batch-00004"
+     },
+     {
+      "actor": "run2",
+      "event": "in_transaction",
+      "pid": 93004,
+      "unit": "batch-00005"
+     },
+     {
+      "actor": "run2",
+      "csn": 980,
+      "event": "committed",
+      "pid": 93004,
+      "unit": "batch-00005"
+     },
+     {
+      "actor": "run2",
+      "event": "in_transaction",
+      "pid": 93004,
+      "unit": "batch-00006"
+     },
+     {
+      "actor": "run2",
+      "csn": 1088,
+      "event": "committed",
+      "pid": 93004,
+      "unit": "batch-00006"
+     },
+     {
+      "actor": "run2",
+      "event": "sigkill_self",
+      "pid": 93004,
+      "point": "after_commit",
+      "unit": "batch-00006"
+     }
+    ],
+    "importer": "run2",
+    "phase": "2 restart, killed right after batch 6 was acknowledged as committed",
+    "returncode": -9,
+    "state_after": {
+     "committed_units": [
+      "batch-00000",
+      "batch-00001",
+      "batch-00002",
+      "batch-00003",
+      "batch-00004",
+      "batch-00005",
+      "batch-00006",
+      "static"
+     ],
+     "recovery_outcome": "clean",
+     "recovery_report": {
+      "findings": [],
+      "last_good_lsn": 1088,
+      "ledger_entries_created": 0,
+      "outcome": "clean",
+      "records_discarded": 0,
+      "records_replayed": 0
+     },
+     "relationships": {
+      "About": 70,
+      "Mentions": 70,
+      "Opened": 70
+     },
+     "ticket_id_max": 70,
+     "ticket_id_min": 1,
+     "tickets": 70,
+     "verify_findings": 0
+    },
+    "stats": null
+   },
+   {
+    "crash_injected": null,
+    "events": [
+     {
+      "actor": "run3",
+      "already_committed": [
+       "batch-00000",
+       "batch-00001",
+       "batch-00002",
+       "batch-00003",
+       "batch-00004",
+       "batch-00005",
+       "batch-00006",
+       "static"
+      ],
+      "event": "start",
+      "pid": 93005
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00000"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00001"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00002"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00003"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00004"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00005"
+     },
+     {
+      "actor": "run3",
+      "event": "skipped",
+      "pid": 93005,
+      "unit": "batch-00006"
+     },
+     {
+      "actor": "run3",
+      "event": "in_transaction",
+      "pid": 93005,
+      "unit": "batch-00007"
+     },
+     {
+      "actor": "run3",
+      "csn": 1202,
+      "event": "committed",
+      "pid": 93005,
+      "unit": "batch-00007"
+     },
+     {
+      "actor": "run3",
+      "event": "in_transaction",
+      "pid": 93005,
+      "unit": "batch-00008"
+     },
+     {
+      "actor": "run3",
+      "csn": 1310,
+      "event": "committed",
+      "pid": 93005,
+      "unit": "batch-00008"
+     },
+     {
+      "actor": "run3",
+      "event": "in_transaction",
+      "pid": 93005,
+      "unit": "batch-00009"
+     },
+     {
+      "actor": "run3",
+      "csn": 1417,
+      "event": "committed",
+      "pid": 93005,
+      "unit": "batch-00009"
+     }
+    ],
+    "importer": "run3",
+    "phase": "3 restart, finishes the job",
+    "returncode": 0,
+    "state_after": {
+     "committed_units": [
+      "batch-00000",
+      "batch-00001",
+      "batch-00002",
+      "batch-00003",
+      "batch-00004",
+      "batch-00005",
+      "batch-00006",
+      "batch-00007",
+      "batch-00008",
+      "batch-00009",
+      "static"
+     ],
+     "recovery_outcome": "clean",
+     "recovery_report": {
+      "findings": [],
+      "last_good_lsn": 1417,
+      "ledger_entries_created": 0,
+      "outcome": "clean",
+      "records_discarded": 0,
+      "records_replayed": 325
+     },
+     "relationships": {
+      "About": 100,
+      "Mentions": 100,
+      "Opened": 100
+     },
+     "ticket_id_max": 100,
+     "ticket_id_min": 1,
+     "tickets": 100,
+     "verify_findings": 0
+    },
+    "stats": {
+     "all_durable": true,
+     "batches_total": 10,
+     "committed": [
+      "batch-00007",
+      "batch-00008",
+      "batch-00009"
+     ],
+     "conflicts": 0,
+     "elapsed_seconds": 0.131,
+     "job": "import-demo",
+     "pid": 93005,
+     "skipped": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "tickets_committed": 30
+    }
+   },
+   {
+    "crash_injected": null,
+    "events": [
+     {
+      "actor": "run4",
+      "already_committed": [
+       "batch-00000",
+       "batch-00001",
+       "batch-00002",
+       "batch-00003",
+       "batch-00004",
+       "batch-00005",
+       "batch-00006",
+       "batch-00007",
+       "batch-00008",
+       "batch-00009",
+       "static"
+      ],
+      "event": "start",
+      "pid": 93006
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00000"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00001"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00002"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00003"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00004"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00005"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00006"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00007"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00008"
+     },
+     {
+      "actor": "run4",
+      "event": "skipped",
+      "pid": 93006,
+      "unit": "batch-00009"
+     }
+    ],
+    "importer": "run4",
+    "phase": "4 start again on the finished job (must change nothing)",
+    "returncode": 0,
+    "state_after": {
+     "committed_units": [
+      "batch-00000",
+      "batch-00001",
+      "batch-00002",
+      "batch-00003",
+      "batch-00004",
+      "batch-00005",
+      "batch-00006",
+      "batch-00007",
+      "batch-00008",
+      "batch-00009",
+      "static"
+     ],
+     "recovery_outcome": "clean",
+     "recovery_report": {
+      "findings": [],
+      "last_good_lsn": 1417,
+      "ledger_entries_created": 0,
+      "outcome": "clean",
+      "records_discarded": 0,
+      "records_replayed": 325
+     },
+     "relationships": {
+      "About": 100,
+      "Mentions": 100,
+      "Opened": 100
+     },
+     "ticket_id_max": 100,
+     "ticket_id_min": 1,
+     "tickets": 100,
+     "verify_findings": 0
+    },
+    "stats": {
+     "all_durable": true,
+     "batches_total": 10,
+     "committed": [],
+     "conflicts": 0,
+     "elapsed_seconds": 0.008,
+     "job": "import-demo",
+     "pid": 93006,
+     "skipped": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "tickets_committed": 0
+    }
+   }
+  ],
+  "rerun_changed_nothing": true,
+  "skipped_by_phase": {
+   "run1": null,
+   "run2": null,
+   "run3": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "run4": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  "state_before": {
+   "committed_units": [],
+   "recovery_outcome": "clean",
+   "recovery_report": {
+    "findings": [
+     {
+      "detail": "The catalog was re-derived from the replayed pages and adopted, holding 18 tables; the store is not left refusing its next save.",
+      "entry_id": 0,
+      "file": "catalog.dat",
+      "kind": "catalog_adopted",
+      "length": 0,
+      "lsn": 0,
+      "offset": 0,
+      "page": -1,
+      "quarantine": ""
+     }
+    ],
+    "last_good_lsn": 27,
+    "ledger_entries_created": 0,
+    "outcome": "clean",
+    "records_discarded": 0,
+    "records_replayed": 21
+   },
+   "relationships": {
+    "About": 0,
+    "Mentions": 0,
+    "Opened": 0
+   },
+   "ticket_id_max": null,
+   "ticket_id_min": null,
+   "tickets": 0,
+   "verify_findings": 0
+  }
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "scenario": "resume"
+}

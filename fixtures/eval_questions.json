@@ -1,0 +1,185 @@
+{
+ "note": "Question texts were written by hand before any search ran and were not changed after seeing results. Labels are in eval_qrels.json and come from scripts/make_fixtures.py, not from a person.",
+ "questions": [
+  {
+   "id": "f01",
+   "text": "reset password link never reaches my inbox",
+   "intent": "feature"
+  },
+  {
+   "id": "f02",
+   "text": "folder upload frozen near the end",
+   "intent": "feature"
+  },
+  {
+   "id": "f03",
+   "text": "tax amount on invoices is incorrect",
+   "intent": "feature"
+  },
+  {
+   "id": "f04",
+   "text": "customer billed two times for the same invoice",
+   "intent": "feature"
+  },
+  {
+   "id": "f05",
+   "text": "refund is stuck and has not arrived",
+   "intent": "feature"
+  },
+  {
+   "id": "f06",
+   "text": "csv download of invoices comes out blank",
+   "intent": "feature"
+  },
+  {
+   "id": "f07",
+   "text": "dashboard is very slow to open",
+   "intent": "feature"
+  },
+  {
+   "id": "f08",
+   "text": "weekly report email did not come",
+   "intent": "feature"
+  },
+  {
+   "id": "f09",
+   "text": "callbacks to our endpoint time out with a 504",
+   "intent": "feature"
+  },
+  {
+   "id": "f10",
+   "text": "too many requests error during batch jobs",
+   "intent": "feature"
+  },
+  {
+   "id": "f11",
+   "text": "api credential rejected as invalid",
+   "intent": "feature"
+  },
+  {
+   "id": "f12",
+   "text": "events are not redelivered after a failure",
+   "intent": "feature"
+  },
+  {
+   "id": "f13",
+   "text": "certificate expired on our custom domain",
+   "intent": "feature"
+  },
+  {
+   "id": "f14",
+   "text": "push alerts do not show up on my phone",
+   "intent": "feature"
+  },
+  {
+   "id": "f15",
+   "text": "app forgets my changes when there is no connection",
+   "intent": "feature"
+  },
+  {
+   "id": "f16",
+   "text": "face recognition login stopped working",
+   "intent": "feature"
+  },
+  {
+   "id": "f17",
+   "text": "battery drains fast because of the app",
+   "intent": "feature"
+  },
+  {
+   "id": "f18",
+   "text": "app closes immediately when opening settings",
+   "intent": "feature"
+  },
+  {
+   "id": "f19",
+   "text": "two versions of a file created after being offline",
+   "intent": "feature"
+  },
+  {
+   "id": "f20",
+   "text": "currency symbol on invoice is wrong",
+   "intent": "feature"
+  },
+  {
+   "id": "f21",
+   "text": "cannot log in on a second computer",
+   "intent": "feature"
+  },
+  {
+   "id": "f22",
+   "text": "reminder emails sent after payment",
+   "intent": "feature"
+  },
+  {
+   "id": "f23",
+   "text": "storage full warning but plenty of space left",
+   "intent": "feature"
+  },
+  {
+   "id": "f24",
+   "text": "photos stop uploading on cellular",
+   "intent": "feature"
+  },
+  {
+   "id": "i01",
+   "text": "users cannot authenticate since this morning",
+   "intent": "incident"
+  },
+  {
+   "id": "i02",
+   "text": "login keeps failing and sessions expire",
+   "intent": "incident"
+  },
+  {
+   "id": "i03",
+   "text": "credentials rejected across our apps",
+   "intent": "incident"
+  },
+  {
+   "id": "i04",
+   "text": "transactional emails are not being delivered",
+   "intent": "incident"
+  },
+  {
+   "id": "i05",
+   "text": "email sent late or never arrives",
+   "intent": "incident"
+  },
+  {
+   "id": "i06",
+   "text": "notification emails delayed by an hour",
+   "intent": "incident"
+  },
+  {
+   "id": "i07",
+   "text": "uploads and syncing hang at the end",
+   "intent": "incident"
+  },
+  {
+   "id": "i08",
+   "text": "storage usage numbers look wrong and transfers stall",
+   "intent": "incident"
+  },
+  {
+   "id": "i09",
+   "text": "files stop uploading halfway",
+   "intent": "incident"
+  },
+  {
+   "id": "i10",
+   "text": "invoices show wrong amounts",
+   "intent": "incident"
+  },
+  {
+   "id": "i11",
+   "text": "incorrect tax and currency values on invoices",
+   "intent": "incident"
+  },
+  {
+   "id": "i12",
+   "text": "invoice numbers and columns are off",
+   "intent": "incident"
+  }
+ ]
+}

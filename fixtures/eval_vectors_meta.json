@@ -1,0 +1,12 @@
+{
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "dimension": 384,
+ "normalized": true,
+ "rounded_decimals": 5,
+ "sentence_transformers": "6.2.0",
+ "torch": "2.15.0",
+ "python": "3.12.13",
+ "texts_encoded": 38,
+ "max_abs_diff_vs_saved_question_vectors": 5e-06,
+ "note": "Saved question vectors were made with the versions in vectors_meta.json."
+}

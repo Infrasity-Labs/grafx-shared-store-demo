@@ -1,0 +1,46 @@
+{
+ "elapsed_seconds": 0.36,
+ "grafx_version": "0.0.8",
+ "name": "setup",
+ "result": {
+  "commit_history": true,
+  "grafx_version": "0.0.8",
+  "identity_indexes": true,
+  "last_commit": {
+   "database_uuid": "a6fc4f21d6d84993b0ca3ffe679906d4",
+   "sequence": 19
+  },
+  "machine": "arm64",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "python": "3.12.14",
+  "system_history_tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "tables": [
+   "Product",
+   "Customer",
+   "Article",
+   "Ticket",
+   "Opened",
+   "Mentions",
+   "About",
+   "Covers",
+   "Uses",
+   "Related"
+  ],
+  "verify_findings": 0,
+  "verify_pages_checked": 1374,
+  "verify_records_checked": 11
+ },
+ "run_id": "20261029T190205Z-a5ad197-dirty",
+ "step": 1
+}
